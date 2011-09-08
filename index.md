@@ -4,20 +4,38 @@ title: VHX API docs (beta)
 ---
 
 Greetings, programs.
-<img src="http://vhx.tv/images/spacecat-cropped.png" alt="Spacecat" title="Spacecat" style="float: left; height: 100px; padding-right: 8px; margin-top: -20px;" />
-<div style="clear: both;"></div>
-<br/>
+<img src="http://vhx.tv/images/spacecat-cropped.png" alt="Spacecat" title="Spacecat" style="float: left; height: 100px; padding-right: 12px; margin-top: -20px;" />
+<br style="clear: both;" />
 
-### [Authentication](#authentication)
+## [Getting Started](#getting-started)
+
+The VHX API and this documentation are currently _Hella Beta_ and actively being improved because of your feedback. Please don't hesitate to contact us [via email](mailto:dev@vhx.tv) or through our [contact form](http://vhx.tv/feedback).
+
+Join the [VHXdev mailing list](https://groups.google.com/group/vhx-api) for announcements and general discussion.
+
+
+### [General API info](#general-api-info)
+
+* Response formats: __.json__ and __.xml__
+* JSON requests allow a __callback__ parameter to specify a javascript callback (JSONp)
+
+* Common parameters:
+  *
+  * __email__ -- authenticating user's email (jamie@vhx.tv) or username (jamiew)
+  * __api_token__ -- authenticating user's API token
+  * __page__ -- currently all paged result sets contain 50 results
+  * __url__ -- all video-adding methods (share, queue, like, etc.) accept either an __?id__ parameter or a __?url__ paramter. This lets you easily specify a native VHX video ID or an arbitrary YouTube or Vimeo URL
+
+### [User Authentication](#user-authentication)
 
 We currently use simple API token auth. Specify "email" and "api_token" parameters with your request:
 
 * __email__ -- can be the user's email address (jamie@vhx.tv) or username (jamiew)
 * __api_token__ -- can be found on <http://vhx.tv/settings>
 
-### [Registration](#registration)
+### [App Registration](#app-registration)
 
-No application registration is currently required, just specify an identifying "app_id" string
+We don't currently require you to formally register your app, but you are required to specify an identifying __app_id__ parameter with your requests
 
     curl http://api.vhx.tv/jamiew.json?app_id=testbed_app
 
@@ -30,16 +48,8 @@ A sample VHX API call to queue <http://vimeo.com/123456>, authenticating as __@j
       http://vhx.tv/videos/queue.json
 
 
-### [General API info](#general-api-info)
 
-* Response formats: __.json__ and __.xml__
-* JSON requests allow a __callback__ parameter to specify a javascript callback (JSONp)
-
-* Generally accepted parameters:
-  * __?page=__ -- currently all paged result sets contain 50 results
-  * __?url__ -- all video-adding methods (share, queue, like, etc.) accept either an __?id__ parameter or a __?url__ paramter. This lets you easily specify a native VHX video ID or an arbitrary YouTube or Vimeo URL
-
-
+## [API Methods](#api-methods)
 
 ### [Video Actions](#video-actions)
 
@@ -72,25 +82,25 @@ A sample VHX API call to queue <http://vimeo.com/123456>, authenticating as __@j
 
 (everything except 'watched')
 
-### [Playlists]()
+### [Playlists](#playlists)
 
     GET http://vhx.tv/jamiew/awesome-music-videos.json
 
-### [User info & Followers]()
+### [User info & Followers](#user-info-followers)
 
-    -- public --
+    Public:
 
     GET http://vhx.tv/jamiew.json
     GET http://vhx.tv/jamiew/followers.json
     GET http://vhx.tv/jamiew/following.json
 
-    -- auth required --
+    Auth required:
 
       POST http://vhx.tv/jamiew/follow.json
     DELETE http://vhx.tv/jamiew/unfollow.json
 
 
-### [Service Streams]()
+### [Service Streams](#service-streams)
 
 If user has linked their Facebook, Tumblr or Twitter accounts VHX will import videos shared by their friends:
 
@@ -100,8 +110,9 @@ If user has linked their Facebook, Tumblr or Twitter accounts VHX will import vi
     GET http://vhx.tv/twitter.json
     GET http://vhx.tv/tumblr.json
 
+## [More info](#more-info)
 
-### [Rate Limits]()
+### [Rate Limits](#rate-limits)
 
 Currently we allow 86k API requests per (app + IP address) combo per day (the "request window"), which is 1 request per second. This is _not_ a rolling window and expires at midnight UTC each day.
 
@@ -115,21 +126,21 @@ Every API response contains the following HTTP headers to let you know about rat
 
 If you are rocking out and need your limits bumped don't hesitate to [contact us](mailto:team@vhx.tv?subject=I+need+more+API+requests).
 
-### [CHANGELOG]()
+### [CHANGELOG](#changelog)
 
 * __r3__ [2011-09-07]: documentation updates
 * __r2__ [2011-09-01]: added playlists
 * __r1__ [2011-07-25]: initial commit
 
 
-### [Roadmap]()
+### [Roadmap](#roadmap)
 
 * OAuth2 support (we will grandfather in apps using api_tokens)
 * Client libraries -- ruby, python, PHP, javascript (node.js)
 * More sample code and example apps! [Send us yours](mailto:team@vhx.tv)
 
 
-### [Video host support]()
+### [Video support](#video-support)
 
 * YouTube
 * Vimeo
@@ -137,6 +148,6 @@ If you are rocking out and need your limits bumped don't hesitate to [contact us
 We have near-term plans to add support for several other video hosting sites as well as raw video files. [Contact us](mailto:dev@vhx.tv) if you'd like us to support your site! Flash/AS3-friendly video player APIs preferred.
 
 
-### [Legal]()
+### [Legal](#legal)
 
 By using the VHX API, you agree to the [VHX API Terms of Service](/tos.html).
