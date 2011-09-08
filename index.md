@@ -9,7 +9,7 @@ Greetings, programs.
 
 ## [Getting Started](#getting-started)
 
-The VHX API and this documentation are currently _Hella Beta_ and actively being improved because of your feedback. Please don't hesitate to contact us [via email](mailto:dev@vhx.tv) or through our [contact form](http://vhx.tv/feedback).
+The VHX API and this documentation are currently _Hella Beta_. Please don't hesitate to contact us [via email](mailto:dev@vhx.tv) or through our [contact form](http://vhx.tv/feedback).
 
 Join the [VHXdev mailing list](https://groups.google.com/group/vhx-api) for announcements and general discussion.
 
@@ -20,7 +20,6 @@ Join the [VHXdev mailing list](https://groups.google.com/group/vhx-api) for anno
 * JSON requests allow a __callback__ parameter to specify a javascript callback (JSONp)
 
 * Common parameters:
-  *
   * __email__ -- authenticating user's email (jamie@vhx.tv) or username (jamiew)
   * __api_token__ -- authenticating user's API token
   * __page__ -- currently all paged result sets contain 50 results
@@ -28,32 +27,52 @@ Join the [VHXdev mailing list](https://groups.google.com/group/vhx-api) for anno
 
 ### [User Authentication](#user-authentication)
 
-We currently use simple API token auth. Specify "email" and "api_token" parameters with your request:
+We currently use a simple API tokens to authenticate you as a user with plans to add full OAuth2 support. Just specify "email" and "api_token" parameters with your request:
 
 * __email__ -- can be the user's email address (jamie@vhx.tv) or username (jamiew)
 * __api_token__ -- can be found on <http://vhx.tv/settings>
 
 ### [App Registration](#app-registration)
 
-We don't currently require you to formally register your app, but you are required to specify an identifying __app_id__ parameter with your requests
+We don't currently require you to formally register your app, but you are required to specify an identifying __app_id__ parameter with your requests. e.g:
 
     curl http://api.vhx.tv/jamiew.json?app_id=testbed_app
 
-A sample VHX API call to queue <http://vimeo.com/123456>, authenticating as __@jamiew__:
+### [curl samples](#curl-samples)
+
+Get all the videos shared by [@staff](http://vhx.tv/staff/shared):
+
+  curl http://api.vhx.tv/staff/shared.json?app_id=test
+
+
+Get queued videos for the current user, authenticating as __@jamiew__:
+
+  curl http://api.vhx.tv/queue.json?app_id=test&email=jamiew&api_token=[SECRET]
+
+
+Add <http://vimeo.com/123456> to my queue, authenticating as __@jamiew__:
 
     curl -d app_id=test \
       -d url=http://vimeo.com/123456 \
       -d email=jamiew \
-      -d api_token=123xyz \
+      -d api_token=[SECRET] \
       http://api.vhx.tv/videos/queue.json
 
+Share that same video, with a simple urlencoded comment:
+
+    curl -d app_id=test \
+        -d url=http://vimeo.com/2 \
+        -d email=jamiew \
+        -d api_token=SECRET \
+        -d comment=First+video+on+vimeo \
+        http://api.vhx.tv/videos/share.json
 
 
 ## [API Methods](#api-methods)
 
 ### [Video Actions](#video-actions)
 
-*auth required
+_auth required_
 
       POST http://api.vhx.tv/videos/queue.json?url=http://vimeo.com/2
     DELETE http://api.vhx.tv/videos/unqueue.json?url=http://vimeo.com/2
@@ -66,14 +85,16 @@ A sample VHX API call to queue <http://vimeo.com/123456>, authenticating as __@j
 
 ### [Your Videos](#your-videos)
 
-*auth required
+_auth required_
 
     GET http://api.vhx.tv/shared.json
     GET http://api.vhx.tv/queued.json
     GET http://api.vhx.tv/liked.json
     GET http://api.vhx.tv/watched.json
 
-### [Other People's Videos (public)](#other-peoples-videos)
+### [Other People's Videos](#other-peoples-videos)
+
+_public_
 
     GET http://api.vhx.tv/jamiew.json
     GET http://api.vhx.tv/jamiew/shared.json
@@ -82,19 +103,16 @@ A sample VHX API call to queue <http://vimeo.com/123456>, authenticating as __@j
 
 (everything except 'watched')
 
-### [Playlists](#playlists)
-
-    GET http://api.vhx.tv/jamiew/awesome-music-videos.json
 
 ### [User info & Followers](#user-info-followers)
 
-    Public:
+_public_
 
     GET http://api.vhx.tv/jamiew.json
     GET http://api.vhx.tv/jamiew/followers.json
     GET http://api.vhx.tv/jamiew/following.json
 
-    Auth required:
+_auth required_
 
       POST http://api.vhx.tv/jamiew/follow.json
     DELETE http://api.vhx.tv/jamiew/unfollow.json
@@ -114,7 +132,7 @@ If user has linked their Facebook, Tumblr or Twitter accounts VHX will import vi
 
 ### [Rate Limits](#rate-limits)
 
-Currently we allow 86k API requests per (app + IP address) combo per day (the "request window"), which is 1 request per second. This is _not_ a rolling window and expires at midnight UTC each day.
+Currently we allow 86k API requests per (app + IP address) combo per day, which is 1 request per second. The day window is not rolling, and expires at midnight UTC each day.
 
 If you've exceeded the rate limits you'll receive a __403 Forbidden__ response code.
 
@@ -125,6 +143,7 @@ Every API response contains the following HTTP headers to let you know about rat
 - X-RateLimit-Reset -- unixtime when your request window we be reset
 
 If you are rocking out and need your limits bumped don't hesitate to [contact us](mailto:team@vhx.tv?subject=I+need+more+API+requests).
+
 
 ### [CHANGELOG](#changelog)
 
@@ -145,7 +164,7 @@ If you are rocking out and need your limits bumped don't hesitate to [contact us
 * YouTube
 * Vimeo
 
-We have near-term plans to add support for several other video hosting sites as well as raw video files. [Contact us](mailto:dev@vhx.tv) if you'd like us to support your site! Flash/AS3-friendly video player APIs preferred.
+We have near-term plans to add support for several other video hosting sites as well as raw video files. [Contact us](mailto:dev@vhx.tv) if you'd like us to support your site. Flash/AS3-friendly video player APIs preferred.
 
 
 ### [Legal](#legal)
