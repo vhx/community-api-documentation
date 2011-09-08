@@ -10,9 +10,9 @@ task :server do
   jekyll('--server --auto')
 end
 
-desc 'Build and deploy'
-task :deploy => :build do
-  sh 'rsync -rtzh --progress --delete _site/ jamiew@txd:~/domains/irenepolnyi.com/web/public'
+desc 'Deploy publicly'
+task :deploy do
+  sh 'git push release master:gh-pages'
 end
 
 def jekyll(opts = '')
