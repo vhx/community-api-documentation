@@ -42,12 +42,12 @@ We don't currently require you to formally register your app, but you are requir
 
 Get all the videos shared by [@staff](http://vhx.tv/staff/shared):
 
-  curl http://api.vhx.tv/staff/shared.json?app_id=test
+    curl http://api.vhx.tv/staff/shared.json?app_id=test
 
 
 Get queued videos for the current user, authenticating as __@jamiew__:
 
-  curl http://api.vhx.tv/queue.json?app_id=test&email=jamiew&api_token=[SECRET]
+    curl http://api.vhx.tv/queue.json?app_id=test&email=jamiew&api_token=[SECRET]
 
 
 Add <http://vimeo.com/123456> to my queue, authenticating as __@jamiew__:
