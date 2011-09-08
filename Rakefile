@@ -12,7 +12,7 @@ end
 
 desc 'Deploy publicly'
 task :deploy do
-  sh 'git push release master:gh-pages'
+  sh 'git push origin master:gh-pages'
 end
 
 def jekyll(opts = '')
