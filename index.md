@@ -45,7 +45,7 @@ A sample VHX API call to queue <http://vimeo.com/123456>, authenticating as __@j
       -d url=http://vimeo.com/123456 \
       -d email=jamiew \
       -d api_token=123xyz \
-      http://vhx.tv/videos/queue.json
+      http://api.vhx.tv/videos/queue.json
 
 
 
@@ -55,49 +55,49 @@ A sample VHX API call to queue <http://vimeo.com/123456>, authenticating as __@j
 
 *auth required
 
-      POST http://vhx.tv/videos/queue.json?url=http://vimeo.com/2
-    DELETE http://vhx.tv/videos/unqueue.json?url=http://vimeo.com/2
+      POST http://api.vhx.tv/videos/queue.json?url=http://vimeo.com/2
+    DELETE http://api.vhx.tv/videos/unqueue.json?url=http://vimeo.com/2
 
-      POST http://vhx.tv/videos/share.json?url=http://vimeo.com/2&comment=Yay+this+is+great
-    DELETE http://vhx.tv/videos/unshare.json?url=http://vimeo.com/2
+      POST http://api.vhx.tv/videos/share.json?url=http://vimeo.com/2&comment=Yay+this+is+great
+    DELETE http://api.vhx.tv/videos/unshare.json?url=http://vimeo.com/2
 
-      POST http://vhx.tv/videos/like.json?url=http://vimeo.com/2
-    DELETE http://vhx.tv/videos/unlike.json?url=http://vimeo.com/2
+      POST http://api.vhx.tv/videos/like.json?url=http://vimeo.com/2
+    DELETE http://api.vhx.tv/videos/unlike.json?url=http://vimeo.com/2
 
 ### [Your Videos](#your-videos)
 
 *auth required
 
-    GET http://vhx.tv/shared.json
-    GET http://vhx.tv/queued.json
-    GET http://vhx.tv/liked.json
-    GET http://vhx.tv/watched.json
+    GET http://api.vhx.tv/shared.json
+    GET http://api.vhx.tv/queued.json
+    GET http://api.vhx.tv/liked.json
+    GET http://api.vhx.tv/watched.json
 
 ### [Other People's Videos (public)](#other-peoples-videos)
 
-    GET http://vhx.tv/jamiew.json
-    GET http://vhx.tv/jamiew/shared.json
-    GET http://vhx.tv/jamiew/queued.json
-    GET http://vhx.tv/jamiew/liked.json
+    GET http://api.vhx.tv/jamiew.json
+    GET http://api.vhx.tv/jamiew/shared.json
+    GET http://api.vhx.tv/jamiew/queued.json
+    GET http://api.vhx.tv/jamiew/liked.json
 
 (everything except 'watched')
 
 ### [Playlists](#playlists)
 
-    GET http://vhx.tv/jamiew/awesome-music-videos.json
+    GET http://api.vhx.tv/jamiew/awesome-music-videos.json
 
 ### [User info & Followers](#user-info-followers)
 
     Public:
 
-    GET http://vhx.tv/jamiew.json
-    GET http://vhx.tv/jamiew/followers.json
-    GET http://vhx.tv/jamiew/following.json
+    GET http://api.vhx.tv/jamiew.json
+    GET http://api.vhx.tv/jamiew/followers.json
+    GET http://api.vhx.tv/jamiew/following.json
 
     Auth required:
 
-      POST http://vhx.tv/jamiew/follow.json
-    DELETE http://vhx.tv/jamiew/unfollow.json
+      POST http://api.vhx.tv/jamiew/follow.json
+    DELETE http://api.vhx.tv/jamiew/unfollow.json
 
 
 ### [Service Streams](#service-streams)
@@ -106,9 +106,9 @@ If user has linked their Facebook, Tumblr or Twitter accounts VHX will import vi
 
 *auth required
 
-    GET http://vhx.tv/facebook.json
-    GET http://vhx.tv/twitter.json
-    GET http://vhx.tv/tumblr.json
+    GET http://api.vhx.tv/facebook.json
+    GET http://api.vhx.tv/twitter.json
+    GET http://api.vhx.tv/tumblr.json
 
 ## [More info](#more-info)
 
