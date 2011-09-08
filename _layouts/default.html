@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+ __   __  __  __    __  __
+/\ \ | | /\ \_\ \  /\_\_\_\
+\ \ \' | \ \  __ \ \/_/\_\/_
+ \ \__|   \ \_\ \_\  /\_\/\_\
+  \/_/     \/_/\/_/  \/_/\/_/
+  Videos. Videos everywhere.
+
+-->
+<html lang="en">
+<head>
+	<title>{{ page.title }}</title>
+	<link rel="shortcut icon" href="http://vhx.tv/favicon.ico" />
+  <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" />
+
+</head>
+<body>
+	<div id="header">
+		<div class="logo">
+			<a href="/"><img src="http://vhx.tv/images/vhx-logo-transparent-large.png" width="180" /></a>
+		</div>
+		<ul id="nav">
+		  <li><a href="/">API docs</a></li>
+		  <li><a href="/sample-code">Sample Code</a></li>
+
+      <!-- <li><a href="resources/videos.html">Videos</a></li>
+      <li><a href="resources/playlists.html">Playlists</a></li>
+      <li><a href="resources/users.html">Users</a></li> -->
+		</ul>
+	</div>
+
+	<div id="main">
+
+    <!-- <a href="http://dev.vhx.tv" class="title">{{ page.title }}</a> -->
+
+		<div class="posts">
+      <!-- <a href="http://dev.vhx.tv" class="title">{{ page.title }}</a> -->
+			<div class="caption">{{ content }}</div>
+      <!-- <a href="PERMALINK" class="date">TIMESTAMP</a> -->
+
+      <!-- API method property detail... -->
+      {% if page.properties != null %}
+        <h2>Returned fields</h2>
+        <table class="prop_table">
+          <tr>
+            <td><b>Name</b></td>
+            <td><b>Description</b></td>
+            <td><b>Returns</b></td>
+            <td><b>Public</b></td>
+          </tr>
+
+          {% for property in page.properties %}
+          <tr>
+            {% for p in property %}
+            <td>{{ p }}</td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+        </table>
+      {% endif %}
+      <div style="clear:both;"></div>
+
+		</div>
+
+    <!-- <div class="pagination">
+        <span class="prev"><a href="PREVPOST" class="pink_btn">Newer</a></span>
+        <a href="NEXTPOST" class="pink_btn">Older</a>
+        <span class="prev"><a href="PREVPAGE" class="pink_btn">Newer</a></span>
+      <a href="NEXTPAGE" class="pink_btn">Older</a>
+      </div> -->
+	</div>
+
+	<div id="footer">
+		<ul id="footer_nav">
+		  <li><a href="/tos.html">Terms of Service</a></li>
+		  <li><a href="mailto:dev@vhx.tv">Contact Us</a></li>
+		</ul>
+
+		<small>&copy; 2011 <a href="http://vhx.tv">VHX Corporation</a>. All rights reserved.</small>
+	</div>
+</body>
+</html>
