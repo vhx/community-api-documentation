@@ -8,7 +8,7 @@ title: VHX API docs (beta)
   $(document).ready(
     function() {
       $('#megaplaya').flash({
-        swf: 'http://vhx.tv/embed/megaplaya',
+        swf: 'http://localhost:3000/embed/megaplaya',
         width: 500,
         allowFullScreen: true,
         allowScriptAccess: true,
@@ -29,8 +29,8 @@ title: VHX API docs (beta)
   {
     $.ajax({
       type: "GET",
-      //url: $('#vimeo_videos_url')[0].value,
-      url: '/js/bumpers.json',
+      url: $('#vimeo_videos_url')[0].value,
+      //url: '/js/bumpers.json',
       dataType: "json",
       success: function(videos, status, ajax) {
         if (videos) {
