@@ -10,34 +10,36 @@
 -->
 <html lang="en">
 <head>
-	<title>{{ page.title }}</title>
-	<link rel="shortcut icon" href="http://vhx.tv/favicon.ico" />
+  <title>{{ page.title }}</title>
+  <link rel="shortcut icon" href="http://vhx.tv/favicon.ico" />
   <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" />
-
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/swfobject.js"></script>
 </head>
 <body>
-	<div id="header">
-		<div class="logo">
-			<a href="/"><img src="http://vhx.tv/images/vhx-logo-transparent-large.png" width="180" /></a>
-		</div>
-		<ul id="nav">
-		  <li><a href="/">API docs</a></li>
-		  <li><a href="/sample-code.html">Sample Code</a></li>
+  <div id="header">
+    <div class="logo">
+      <a href="/"><img src="http://vhx.tv/images/vhx-logo-transparent-large.png" width="180" /></a>
+    </div>
+    <ul id="nav">
+      <li><a href="/">API docs</a></li>
+      <li><a href="/sample-code.html">Sample Code</a></li>
+      <li><a href="/video-player.html">Video player</a></li>
       <li><a href="https://groups.google.com/group/vhx-api">Mailing List</a></li>
 
       <!-- <li><a href="resources/videos.html">Videos</a></li>
       <li><a href="resources/playlists.html">Playlists</a></li>
       <li><a href="resources/users.html">Users</a></li> -->
-		</ul>
-	</div>
+    </ul>
+  </div>
 
-	<div id="main">
+  <div id="main">
 
     <!-- <a href="http://dev.vhx.tv" class="title">{{ page.title }}</a> -->
 
-		<div class="posts">
+    <div class="posts">
       <!-- <a href="http://dev.vhx.tv" class="title">{{ page.title }}</a> -->
-			<div class="caption">{{ content }}</div>
+      <div class="caption">{{ content }}</div>
       <!-- <a href="PERMALINK" class="date">TIMESTAMP</a> -->
 
       <!-- API method property detail... -->
@@ -62,7 +64,7 @@
       {% endif %}
       <div style="clear:both;"></div>
 
-		</div>
+    </div>
 
     <!-- <div class="pagination">
         <span class="prev"><a href="PREVPOST" class="pink_btn">Newer</a></span>
@@ -70,16 +72,16 @@
         <span class="prev"><a href="PREVPAGE" class="pink_btn">Newer</a></span>
       <a href="NEXTPAGE" class="pink_btn">Older</a>
       </div> -->
-	</div>
+  </div>
 
-	<div id="footer">
-		<ul id="footer_nav">
-		  <li><a href="/tos.html">Terms of Service</a></li>
-		  <li><a href="mailto:dev@vhx.tv">Contact Us</a></li>
-		</ul>
+  <div id="footer">
+    <ul id="footer_nav">
+      <li><a href="/tos.html">Terms of Service</a></li>
+      <li><a href="mailto:dev@vhx.tv">Contact Us</a></li>
+    </ul>
 
-		<small>&copy; 2011 <a href="http://vhx.tv">VHX Corporation</a>. All rights reserved.</small>
-	</div>
+    <small>&copy; 2011 <a href="http://vhx.tv">VHX Corporation</a>. All rights reserved.</small>
+  </div>
 
 <!-- stats -->
 <script type="text/javascript">

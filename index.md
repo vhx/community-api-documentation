@@ -3,16 +3,17 @@ layout: default
 title: VHX API docs (beta)
 ---
 
-Greetings, programs.
-<img src="http://vhx.tv/images/spacecat-cropped.png" alt="Spacecat" title="Spacecat" style="float: left; height: 100px; padding-right: 12px; margin-top: -20px;" />
-<br style="clear: both;" />
+<div style="text-align:center;padding-top: 20px;">
+  <img align="center" src="http://vhx.tv/images/spacecat-cropped.png" alt="Spacecat" title="Spacecat" style="text-align:center;height: 100px; padding-right: 12px; " />
+</div>
+<div style="text-align:center">Greetings, programs.</div>
+
 
 ## [Getting Started](#getting-started)
 
 The VHX API and this documentation are currently _Hella Beta_. Please don't hesitate to contact us [via email](mailto:dev@vhx.tv) or through our [contact form](http://vhx.tv/feedback).
 
 Join the [VHXdev mailing list](https://groups.google.com/group/vhx-api) for announcements and general discussion.
-
 
 ### [General API info](#general-api-info)
 
