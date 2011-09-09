@@ -8,7 +8,7 @@ title: VHX API docs (beta)
   $(document).ready(
     function() {
       $('#megaplaya').flash({
-        swf: 'http://localhost:3000/embed/megaplaya',
+        swf: 'http://vhx.tv/embed/megaplaya',
         width: 500,
         allowFullScreen: true,
         allowScriptAccess: true,
