@@ -20,16 +20,16 @@ Join the [VHXdev mailing list](https://groups.google.com/group/vhx-api) for anno
 * JSON requests allow a __callback__ parameter to specify a javascript callback (JSONp)
 
 * Common parameters:
-  * __email__ -- authenticating user's email (jamie@vhx.tv) or username (jamiew)
-  * __api_token__ -- authenticating user's API token
+  * __login__ -- authenticating user's username (jamiew) or email address (jamie@vhx.tv)
+  * __api_token__ -- authenticating user's API token, found on <http://vhx.tv/settings>
   * __page__ -- currently all paged result sets contain 50 results
   * __url__ -- all video-adding methods (share, queue, like, etc.) accept either an __?id__ parameter or a __?url__ paramter. This lets you easily specify a native VHX video ID or an arbitrary YouTube or Vimeo URL
 
 ### [User Authentication](#user-authentication)
 
-We currently use a simple API tokens to authenticate you as a user with plans to add full OAuth2 support. Just specify "email" and "api_token" parameters with your request:
+We currently use a simple API tokens to authenticate you as a user with plans to add full OAuth2 support. Just specify "login" and "api_token" parameters with your request:
 
-* __email__ -- can be the user's email address (jamie@vhx.tv) or username (jamiew)
+* __login__ -- can be username (jamiew) or email address (jamie@vhx.tv)
 * __api_token__ -- can be found on <http://vhx.tv/settings>
 
 ### [App Registration](#app-registration)
@@ -47,14 +47,14 @@ Get all the videos shared by [@staff](http://vhx.tv/staff/shared):
 
 Get queued videos for the current user, authenticating as __@jamiew__:
 
-    curl http://api.vhx.tv/queue.json?app_id=test&email=jamiew&api_token=[SECRET]
+    curl http://api.vhx.tv/queue.json?app_id=test&login=jamiew&api_token=[SECRET]
 
 
 Add <http://vimeo.com/123456> to my queue, authenticating as __@jamiew__:
 
     curl -d app_id=test \
       -d url=http://vimeo.com/123456 \
-      -d email=jamiew \
+      -d login=jamiew \
       -d api_token=[SECRET] \
       http://api.vhx.tv/videos/queue.json
 
@@ -62,7 +62,7 @@ Share that same video, with a simple urlencoded comment:
 
     curl -d app_id=test \
         -d url=http://vimeo.com/2 \
-        -d email=jamiew \
+        -d login=jamiew \
         -d api_token=SECRET \
         -d comment=First+video+on+vimeo \
         http://api.vhx.tv/videos/share.json
