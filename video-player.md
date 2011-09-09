@@ -30,7 +30,7 @@ title: VHX API docs (beta)
       type: "GET",
       url: $('#vimeo_videos_url')[0].value,
       //url: '/js/bumpers.json',
-      dataType: "json",
+      dataType: "jsonp",
       success: function(videos, status, ajax) {
         if (videos) {
           megaplaya.api_playQueue(videos);
