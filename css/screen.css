@@ -322,9 +322,9 @@ em, i { font-style: italic; }
 #footer ul li { list-style: none; display: inline; margin: 0; padding: 0 10px 0 0; }
 
 #megaplaya { margin: 20px 170px; }
-input { border: 1px solid #ccc; padding: 6px; color: #000; font: normal 12px Helvetica, Arial; width: 200px; }
+input { border: 1px solid #ccc; padding: 6px; color: #000; font: normal 14px Helvetica, Arial; }
 
-.btn { background: #18d6cf; border: 1px solid #5ee2dd; border-color: #5ee2dd #0e807c #0e807c #5ee2dd; -moz-user-select: none; -webkit-user-select: none; -moz-border-radius: 2px; -webkit-border-radius: 2px; -khtml-border-radius: 2px; border-radius: 2px; text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4); color: #fff; font-weight: bold; text-align: center; padding: 5px; cursor: pointer; }
+.btn { background: #18d6cf; border: 1px solid #5ee2dd; border-color: #5ee2dd #0e807c #0e807c #5ee2dd; -moz-user-select: none; -webkit-user-select: none; -moz-border-radius: 2px; -webkit-border-radius: 2px; -khtml-border-radius: 2px; border-radius: 2px; text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4); color: #fff; font-weight: bold; text-align: center; padding: 2px 5px; cursor: pointer; }
 .btn:hover { background: #5ee2dd; border-color: #5ee2dd #0e807c #0e807c #5ee2dd; }
 .btn:active { background: #18d6cf; border-color: #0e807c #5ee2dd #5ee2dd #0e807c; }
 
