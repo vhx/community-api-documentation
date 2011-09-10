@@ -88,7 +88,7 @@ background-position: 100% 100%
   margin-top: 10px;
   }
 #nav {
-  font: normal 14px Helvetica, Arial;
+  font: bold 16px Helvetica, Arial;
       float: right;
       margin-top: -17px;
       padding-right: 20px;
@@ -99,14 +99,20 @@ background-position: 100% 100%
       margin: 0 0 0 20px;
   }
   #nav li a {
-      color: #fff;
+    font: bold 14px Helvetica, Arial !important;
+    color: #fff;
   }
   #nav li a:hover {
-      color: #d81965;
+
+    color: #d81965;
   }
-a {
+  a {
+    font-weight: bold;
       text-decoration: none;
       color: #d81965;
+  }
+  a:hover {
+    color: #18d6cf;
   }
   a.blue_btn {
       background: #18d6cf;
@@ -153,6 +159,10 @@ a {
   text-align: center;
   }
 /* text posts */
+h2  {
+  text-align: center;
+  border-top: 60px solid #fff;
+}
 a.title, h3 a {
   background: #222;
   font: bold 20px Helvetica, Arial;
@@ -179,7 +189,7 @@ a.title:active, h3 a:hover {
 }
 .caption {
   border-top: 1px solid #fff;
-  border-right: 1px solid #ddd;
+
   border-bottom: 1px solid #ddd;
   border-left: 0px solid #fff;
   background: #F9F9F9;
@@ -231,7 +241,7 @@ h2 {
   .description {
   display: block;
   border-top: 1px solid #fff;
-  border-right: 1px solid #ddd;
+
   border-bottom: 1px solid #ddd;
   border-left: 0px solid #fff;
   background: #F9F9F9;
@@ -328,3 +338,4 @@ input { border: 1px solid #ccc; padding: 6px; color: #000; font: normal 14px Hel
 .btn:hover { background: #5ee2dd; border-color: #5ee2dd #0e807c #0e807c #5ee2dd; }
 .btn:active { background: #18d6cf; border-color: #0e807c #5ee2dd #5ee2dd #0e807c; }
 
+pre { background: #E9E9E9; padding: 20px; color: #333; box-shadow:inset 0 0 30px rgba(0,0,0,.1);  -webkit-box-shadow:inset 0 0 30px rgba(0,0,0,.1); }

@@ -6,12 +6,14 @@ title: VHX API docs (beta)
 <div style="text-align:center;padding-top: 20px;">
   <img align="center" src="http://vhx.tv/images/spacecat-cropped.png" alt="Spacecat" title="Spacecat" style="text-align:center;height: 100px; padding-right: 12px; " />
 </div>
-<div style="text-align:center">Greetings, programs.</div>
+<div style="text-align:center;font-size:18px;margin-bottom:40px;">Greetings, programs.</div>
 
 
 The VHX API and this documentation are currently _Hella Beta_. Please don't hesitate to contact us [via email](mailto:dev@vhx.tv) or through our [contact form](http://vhx.tv/feedback).
 
 Join the [VHXdev mailing list](https://groups.google.com/group/vhx-api) for announcements and general discussion.
+
+Be sure you check out our amazing video player, [Megaplaya](http://dev.vhx.tv/video-player.html). It makes it _easy_ to play YouTube, Vimeo and raw video files seamlessly, back-to-back.
 
 ### [General API info](#general-api-info)
 
