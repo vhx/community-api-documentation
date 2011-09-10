@@ -8,12 +8,23 @@ title: VHX API docs (beta)
 </div>
 <div style="text-align:center;font-size:18px;margin-bottom:40px;">Greetings, programs.</div>
 
+<div class="col" markdown="1">
+  <div class="title">Video metadata</div>
+  Easily grab any type information about a video
+</div>
+<div class="col" markdown="1">
+  <div class="title">Playlists</div>
+  Easily make playlists of videos and watch them in a fun, mixtape-like experience. [Here's an example](http://vhx.tv/casey/music-videos)
+</div>
+<div class="col" markdown="1">
+  <div class="title">Embeddable player</div>
+  User our player to play any type of video on the fly in a seamless, back-to-back experience. [Try it out](/video-player.html)
+</div>
+<div class="clear">&nbsp;</div>
 
 The VHX API and this documentation are currently _Hella Beta_. Please don't hesitate to contact us [via email](mailto:dev@vhx.tv) or through our [contact form](http://vhx.tv/feedback).
 
 Join the [VHXdev mailing list](https://groups.google.com/group/vhx-api) for announcements and general discussion.
-
-Be sure you check out our amazing video player, [Megaplaya](http://dev.vhx.tv/video-player.html). It makes it _easy_ to play YouTube, Vimeo and raw video files seamlessly, back-to-back.
 
 ### [General API info](#general-api-info)
 

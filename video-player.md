@@ -173,3 +173,20 @@ Below is the list of available JS api hooks. Please don't hesitate to send us bu
 
     api_getCurPlayingVideo():Object  // Returns current playing video boject
     api_getCurrentTime():Number      // Current time in seconds
+
+## [FAQ](#faq)
+
+__Can I update the queue without restarting it?__
+
+Yes you can. We have no built-in methods for this, but you can simply do something like this:
+
+    // load some videos in
+    player.api_playQueue(myvideos);
+
+    // Load in a new set of videos. Note that megaplaya will continue playing the current video
+    player.api_updateQueue(mynewvideos);
+
+    // Just make sure when you update the queue, you update the position of the current playing video
+    // so megaplaya knows where it should be playing in the queue
+    player.api_setQueueAt(index);
+
