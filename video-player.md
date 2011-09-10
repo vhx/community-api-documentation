@@ -38,19 +38,18 @@ title: VHX API docs (beta)
       }
      });
   }
-
 </script>
 
 Welcome to <b markdown="1">Megaplaya</b>, VHX's video player. You can load in a playlist of YouTube, Vimeo and raw video files using just Javascript. You can even create your own JS controls for Megaplaya.
 
 Below is an example that loads in all our VHX fan-made bumper videos from [vimeo.com/vhx/videos](http://vimeo.com/vhx/videos). Click the Load videos button below. If you have your own Vimeo account, replace "vhx" with your own account name.
 
-<div id="vhx_megaplaya">Loading...</div>
-
-<div style="margin-left: 170px;" markdown="1">
-<input id="vimeo_videos_url" type="text" value="http://vimeo.com/api/v2/vhx/videos.json" style="width:300px;" />
-<div class="btn" onclick="load_videos()" style="width: 140px;">Load videos</div>
+<div style="margin-left: 170px;margin-top: 30px;" markdown="1">
+<input id="vimeo_videos_url" type="text" value="http://vimeo.com/api/v2/vhx/videos.json" style="width:330px;" />
+<input type="button" class="btn" onclick="load_videos()" style="width: 140px;" value="Load videos" />
 </div>
+
+<div id="vhx_megaplaya">Loading...</div>
 
 ### [Player setup using jQuery](#setup)
 

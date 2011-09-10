@@ -3,7 +3,7 @@ layout: default
 title: VHX API docs (beta)
 ---
 
-## [Greetings, programs.]
+## [Greetings, programs]
 
 <div style="text-align:center;margin-bottom: 40px;">
   <img align="center" src="http://vhx.tv/images/spacecat-cropped.png" alt="Spacecat" title="Spacecat" style="text-align:center;height: 100px; padding-right: 12px; " />
@@ -13,19 +13,29 @@ title: VHX API docs (beta)
   <div class="title">1) Videos!</div>
   Easily grab all information about any video on the web
 </div>
-<div class="col" markdown="1">
+<div class="col col2" markdown="1" style="background: #1a1a1a url('http://sht.tl/aCSEr') -20px 0 no-repeat;" onclick="location.href='#playlists'">
   <div class="title">2) Make Playlists</div>
   Make playlists of videos and watch them in a fun, mixtape-like experience. [Here's an example](http://vhx.tv/casey/music-videos)
 </div>
-<div class="col" markdown="1" style="background: #1a1a1a url('http://sht.tl/9VgT') -120px -40px no-repeat;" onclick="location.href='/video-player.html'">
+<div class="col col3" markdown="1" style="background: #1a1a1a url('http://sht.tl/9VgT') -120px -40px no-repeat;" onclick="location.href='/video-player.html'">
   <div class="title">3) VHX Player</div>
-  Use our player to play any type of video on the fly in a seamless, back-to-back experience. [Try it out](/video-player.html)
+  Use our embeddable player to play any type of video on the fly in a seamless, back-to-back experience. [Try it out](/video-player.html)
 </div>
 <div class="clear">&nbsp;</div>
 
 The VHX API and this documentation are currently in _BETA_. Please don't hesitate to contact us [via email](mailto:dev@vhx.tv) or through our [contact form](http://vhx.tv/feedback). OAuth2 support coming soon.
 
+<br />
+
 Join the [VHXdev mailing list](https://groups.google.com/group/vhx-api) for announcements and general discussion.
+
+Chat with us on IRC: [irc.freenode.net/#vhx](irc://irc.freenode.net/#vhx)
+
+Follow us on Twitter: [@vhxtv](http://twitter.com/vhxtv)
+
+Follow our Tumblr: [blog.vhx.tv](http://blog.vhx.tv)
+
+## [Let's get started]
 
 ### [General API info](#general_api_info)
 
