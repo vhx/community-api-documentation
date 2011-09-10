@@ -148,6 +148,7 @@ If you are rocking out and need your limits bumped don't hesitate to [contact us
 
 ### [CHANGELOG](#changelog)
 
+* __r4__ [2011-09-08]: megaplaya documentation added
 * __r3__ [2011-09-07]: documentation updates
 * __r2__ [2011-09-01]: added playlists
 * __r1__ [2011-07-25]: initial commit
@@ -165,7 +166,7 @@ If you are rocking out and need your limits bumped don't hesitate to [contact us
 * YouTube
 * Vimeo
 
-We have near-term plans to add support for several other video hosting sites as well as raw video files. [Contact us](mailto:dev@vhx.tv) if you'd like us to support your site. Flash/AS3-friendly video player APIs preferred.
+We have near-term plans to add support for several other video hosting sites as well as raw video files. [Contact us](mailto:dev@vhx.tv) if you'd like us to support your site. Direct video file access preferred. Flash/AS3-friendly video player APIs also make us happy.
 
 
 ### [Legal](#legal)

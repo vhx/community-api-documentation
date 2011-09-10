@@ -102,7 +102,9 @@ Each object must contain at least the URL of the video. You may pass as many pro
       {
         id: 9,
         url: 'http://vimeo.com/25584378',
-        hello: "world"
+        hello: "world",
+        thumbnail_url: "url of image here",
+        title: "Title of video"
       }
     ])
 
