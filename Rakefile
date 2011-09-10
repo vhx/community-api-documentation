@@ -12,7 +12,9 @@ end
 
 desc 'Deploy publicly'
 task :deploy do
-  sh 'git push origin master:gh-pages'
+  # TODO freak out if not in gh-pages. This double-push doesn't behave well
+  # sh 'git push origin master:gh-pages'
+  sh 'git push origin gh-pages'
 end
 
 def jekyll(opts = '')
