@@ -3,11 +3,12 @@ layout: default
 title: VHX API docs (beta)
 ---
 
+## Megaplaya
 
 <script type="text/javascript">
   $(document).ready(
     function() {
-      $('#megaplaya').flash({
+      $('#vhx_megaplaya').flash({
         swf: 'http://vhx.tv/embed/megaplaya',
         width: 500,
         allowFullScreen: true,
@@ -21,7 +22,7 @@ title: VHX API docs (beta)
   var megaplaya = false;
   function megaplaya_loaded()
   {
-    megaplaya = $('#megaplaya').children()[0];
+    megaplaya = $('#vhx_megaplaya').children()[0];
   }
 
   function load_videos()
@@ -44,7 +45,7 @@ Welcome to <b markdown="1">Megaplaya</b>, VHX's video player. You can load in a 
 
 Below is an example that loads in all our VHX fan-made bumper videos from [vimeo.com/vhx/videos](http://vimeo.com/vhx/videos). Click the Load videos button below. If you have your own Vimeo account, replace "vhx" with your own account name.
 
-<div id="megaplaya" markdown="1">Loading...</div>
+<div id="vhx_megaplaya">Loading...</div>
 
 <div style="margin-left: 170px;" markdown="1">
 <input id="vimeo_videos_url" type="text" value="http://vimeo.com/api/v2/vhx/videos.json" style="width:300px;" />
@@ -53,11 +54,15 @@ Below is an example that loads in all our VHX fan-made bumper videos from [vimeo
 
 ### [Player setup using jQuery](#setup)
 
-The Megaplaya URL
+For this demo, we're using jQuery, but you can use whatever you want.
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+
+This is the Megaplaya SWF URL
 
     http://vhx.tv/embed/megaplaya
 
-Inject the SWF into the page
+Now inject the SWF into your page.
 
     <div id="vhx_megaplaya"></div>
 
@@ -77,7 +82,7 @@ Inject the SWF into the page
 
 ### [Megaplaya loaded](#megaplaya-loaded)
 
-Megaplaya automatically calls **megaplaya_loaded()** when it's ready
+Megaplaya automatically calls **megaplaya_loaded()** when it's ready. You may also call **api_isLoaded()** to check if the player has loaded already.
 
     var megaplaya = false;
     function megaplaya_loaded()
@@ -88,9 +93,9 @@ Megaplaya automatically calls **megaplaya_loaded()** when it's ready
 
 ### [Let's play some videos](#example)
 
-Simply pass an array of objects to megaplaya, and you're set.
+Simply pass an array of objects that each contain a video url to megaplaya. It's as simple as that.
 
-    megaplaya.playQueue([
+    megaplaya.api_playQueue([
       { url: 'http://www.youtube.com/watch?v=sgKUS9AFemc' },
       { url: 'http://vimeo.com/25584378' },
       { url: 'http://www.flashcomguru.com/flash/bbc_reel_m420pVP6_768K.flv' }
@@ -98,7 +103,7 @@ Simply pass an array of objects to megaplaya, and you're set.
 
 Each object must contain at least the URL of the video. You may pass as many properties as you'd like though. If you pass an id, megaplaya will pass it to all the event listeners.
 
-    megaplaya.playQueue([
+    megaplaya.api_playQueue([
       {
         id: 9,
         url: 'http://vimeo.com/25584378',
@@ -110,14 +115,14 @@ Each object must contain at least the URL of the video. You may pass as many pro
 
 ### [Event listeners](#listen)
 
-You can hook into megaplaya to know when events occur.
+You can hook into megaplaya to know when events occur. In this example, whenever a new video is loaded a javascript alert will popup.
 
-    function onVideoLoad(id, url)
+    function video_load(id, url)
     {
       alert(url + ' is now playing!');
     }
 
-    megaplaya.api_addListener("onVideoLoad", "onVideoLoad");
+    megaplaya.api_addListener("onVideoLoad", "video_load");
 
 ### [Javascript API](#javascript-api)
 
@@ -190,3 +195,10 @@ Yes you can. We have no built-in methods for this, but you can simply do somethi
     // so megaplaya knows where it should be playing in the queue
     player.api_setQueueAt(index);
 
+__What video services do you support?__
+
+* Vimeo
+* YouTube
+* Video files
+
+Support for TED, Blip.tv and DailyMotion coming soon!

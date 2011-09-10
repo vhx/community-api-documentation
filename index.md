@@ -3,30 +3,31 @@ layout: default
 title: VHX API docs (beta)
 ---
 
-<div style="text-align:center;padding-top: 20px;">
+## [Greetings, programs.]
+
+<div style="text-align:center;margin-bottom: 40px;">
   <img align="center" src="http://vhx.tv/images/spacecat-cropped.png" alt="Spacecat" title="Spacecat" style="text-align:center;height: 100px; padding-right: 12px; " />
 </div>
-<div style="text-align:center;font-size:18px;margin-bottom:40px;">Greetings, programs.</div>
 
-<div class="col" markdown="1">
-  <div class="title">Video metadata</div>
-  Easily grab any type information about a video
+<div class="col" markdown="1" style="background: #1a1a1a url('http://sht.tl/ynSeC') 10px 120px no-repeat;" onclick="location.href='#general_api_info'">
+  <div class="title">1) Videos!</div>
+  Easily grab all information about any video on the web
 </div>
 <div class="col" markdown="1">
-  <div class="title">Playlists</div>
-  Easily make playlists of videos and watch them in a fun, mixtape-like experience. [Here's an example](http://vhx.tv/casey/music-videos)
+  <div class="title">2) Make Playlists</div>
+  Make playlists of videos and watch them in a fun, mixtape-like experience. [Here's an example](http://vhx.tv/casey/music-videos)
 </div>
-<div class="col" markdown="1">
-  <div class="title">Embeddable player</div>
-  User our player to play any type of video on the fly in a seamless, back-to-back experience. [Try it out](/video-player.html)
+<div class="col" markdown="1" style="background: #1a1a1a url('http://sht.tl/9VgT') -120px -40px no-repeat;" onclick="location.href='/video-player.html'">
+  <div class="title">3) VHX Player</div>
+  Use our player to play any type of video on the fly in a seamless, back-to-back experience. [Try it out](/video-player.html)
 </div>
 <div class="clear">&nbsp;</div>
 
-The VHX API and this documentation are currently _Hella Beta_. Please don't hesitate to contact us [via email](mailto:dev@vhx.tv) or through our [contact form](http://vhx.tv/feedback).
+The VHX API and this documentation are currently in _BETA_. Please don't hesitate to contact us [via email](mailto:dev@vhx.tv) or through our [contact form](http://vhx.tv/feedback). OAuth2 support coming soon.
 
 Join the [VHXdev mailing list](https://groups.google.com/group/vhx-api) for announcements and general discussion.
 
-### [General API info](#general-api-info)
+### [General API info](#general_api_info)
 
 * Response formats: __.json__ and __.xml__
 * JSON requests allow a __callback__ parameter to specify a javascript callback (JSONp)
@@ -37,20 +38,20 @@ Join the [VHXdev mailing list](https://groups.google.com/group/vhx-api) for anno
   * __page__ -- currently all paged result sets contain 50 results
   * __url__ -- all video-adding methods (share, queue, like, etc.) accept either an __?id__ parameter or a __?url__ paramter. This lets you easily specify a native VHX video ID or an arbitrary YouTube or Vimeo URL
 
-### [User Authentication](#user-authentication)
+### [User Authentication](#user_authentication)
 
 We currently use a simple API tokens to authenticate you as a user with plans to add full OAuth2 support. Just specify "login" and "api_token" parameters with your request:
 
 * __login__ -- can be username (jamiew) or email address (jamie@vhx.tv)
 * __api_token__ -- can be found on <http://vhx.tv/settings>
 
-### [App Registration](#app-registration)
+### [App Registration](#app_registration)
 
 We don't currently require you to formally register your app, but you are required to specify an identifying __app_id__ parameter with your requests. e.g:
 
     curl http://api.vhx.tv/jamiew.json?app_id=testbed_app
 
-### [curl samples](#curl-samples)
+### [curl samples](#curl_samples)
 
 Get all the videos shared by [@staff](http://vhx.tv/staff/shared):
 
@@ -80,9 +81,9 @@ Share that same video, with a simple urlencoded comment:
         http://api.vhx.tv/videos/share.json
 
 
-## [API Methods](#api-methods)
+## [API Methods](#api_methods)
 
-### [Video Actions](#video-actions)
+### [Video Actions](#video_actions)
 
 _auth required_
 
@@ -95,7 +96,7 @@ _auth required_
       POST http://api.vhx.tv/videos/like.json?url=http://vimeo.com/2
     DELETE http://api.vhx.tv/videos/unlike.json?url=http://vimeo.com/2
 
-### [Your Videos](#your-videos)
+### [Your Videos](#your_videos)
 
 _auth required_
 
@@ -104,7 +105,7 @@ _auth required_
     GET http://api.vhx.tv/liked.json
     GET http://api.vhx.tv/watched.json
 
-### [Other People's Videos](#other-peoples-videos)
+### [Other People's Videos](#other_peoples_videos)
 
 _public_
 
@@ -125,7 +126,7 @@ _public_
 
 _auth required_
 
-    POST http://api.vhx.tv/playlists.json         -- create playlist. attributes: title, description, image, color (#ff00ff)
+    POST http://api.vhx.tv/playlists.json         -- create playlist. attributes: title, description, image, color (ff00ff)
     PUT http://api.vhx.tv/playlists/:id.json      -- update playlist's attributes
 
     POST http://api.vhx.tv/playlists/:id/videos                 -- add a video to specified playlist (pass :url or :video_id)
@@ -137,7 +138,7 @@ _auth required_
     GET http://api.vhx.tv/videos/:id/playlists/mine.json  -- playlists by the authenticating user's that said video is in
 
 
-### [User info & Followers](#user-info-followers)
+### [User info & Followers](#user_info_followers)
 
 _public_
 
@@ -151,7 +152,7 @@ _auth required_
     DELETE http://api.vhx.tv/jamiew/unfollow.json
 
 
-### [Service Streams](#service-streams)
+### [Service Streams](#service_streams)
 
 If user has linked their Facebook, Tumblr or Twitter accounts VHX will import videos shared by their friends:
 
@@ -161,9 +162,9 @@ If user has linked their Facebook, Tumblr or Twitter accounts VHX will import vi
     GET http://api.vhx.tv/twitter.json
     GET http://api.vhx.tv/tumblr.json
 
-## [More info](#more-info)
+## [More info](#more_info)
 
-### [Rate Limits](#rate-limits)
+### [Rate Limits](#rate_limits)
 
 Currently we allow 86k API requests per (app + IP address) combo per day, which is 1 request per second. The day window is not rolling, and expires at midnight UTC each day.
 
@@ -193,7 +194,7 @@ If you are rocking out and need your limits bumped don't hesitate to [contact us
 * More sample code and example apps! [Send us yours](mailto:team@vhx.tv)
 
 
-### [Video support](#video-support)
+### [Video support](#video_support)
 
 * YouTube
 * Vimeo
