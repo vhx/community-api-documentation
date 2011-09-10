@@ -128,11 +128,11 @@ _auth required_
     POST http://api.vhx.tv/playlists.json         -- create playlist. attributes: title, description, image, color (#ff00ff)
     PUT http://api.vhx.tv/playlists/:id.json      -- update playlist's attributes
 
-    POST http://api.vhx.tv/playlists/:id/videos   -- add a video to specified playlist (pass :url or :video_id)
-    DELETE http://api.vhx.tv/playlists/:id/videos/:video_id   -- remove video from playlist
-    PUT http://api.vhx.tv/playlists/:id/videos/:video_id/move -- specify :position argument (starts at index 0) to change video's order
+    POST http://api.vhx.tv/playlists/:id/videos                 -- add a video to specified playlist (pass :url or :video_id)
+    DELETE http://api.vhx.tv/playlists/:id/videos/:video_id     -- remove video from playlist
+    PUT http://api.vhx.tv/playlists/:id/videos/:video_id/move   -- specify :position argument (starts at index 0) to change video's order
 
-    GET http://api.vhx.tv/playlists/mine.json     -- authenticating user's playlists
+    GET http://api.vhx.tv/playlists/mine.json             -- authenticating user's playlists
     GET http://api.vhx.tv/videos/:id/playlists.json       -- playlists said video is present in
     GET http://api.vhx.tv/videos/:id/playlists/mine.json  -- playlists by the authenticating user's that said video is in
 
