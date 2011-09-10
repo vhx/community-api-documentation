@@ -40,16 +40,56 @@ title: VHX API docs (beta)
   }
 </script>
 
-Welcome to <b markdown="1">Megaplaya</b>, VHX's video player. You can load in a playlist of YouTube, Vimeo and raw video files using just Javascript. You can even create your own JS controls for Megaplaya.
+Welcome to <b markdown="1">Megaplaya</b>, VHX's video player. You can load in a list of YouTube, Vimeo and raw video URLs using just Javascript. You can even create your own JS controls for Megaplaya.
 
-Below is an example that loads in all our VHX fan-made bumper videos from [vimeo.com/vhx/videos](http://vimeo.com/vhx/videos). Click the Load videos button below. If you have your own Vimeo account, replace "vhx" with your own account name.
+The below example loads all our VHX fan-made bumper videos from [vimeo.com/vhx/videos](http://vimeo.com/vhx/videos) when you click "Load videos.".
 
-<div style="margin-left: 170px;margin-top: 30px;" markdown="1">
-<input id="vimeo_videos_url" type="text" value="http://vimeo.com/api/v2/vhx/videos.json" style="width:330px;" />
-<input type="button" class="btn" onclick="load_videos()" style="width: 140px;" value="Load videos" />
+<div id="player_demo">
+  <div markdown="1">
+    <input id="vimeo_videos_url" type="text" value="http://vimeo.com/api/v2/vhx/videos.json" style="width:330px;" />
+    <input type="button" class="btn" onclick="load_videos()" style="width: 140px;" value="Load videos" />
+  </div>
+  <div id="vhx_megaplaya">Loading...</div>
 </div>
 
-<div id="vhx_megaplaya">Loading...</div>
+<div id="player_demo_code">
+<code><pre>
+$(document).ready(
+  function() {
+    $('#vhx_megaplaya').flash({
+      swf: 'http://vhx.tv/embed/megaplaya',
+      width: 500,
+      allowFullScreen: true,
+      allowScriptAccess: "always",
+      height: 375
+    });
+  }
+);
+
+// Megaplaya calls this function when it's ready
+var megaplaya = false;
+function megaplaya_loaded()
+{
+  megaplaya = $('#vhx_megaplaya').children()[0];
+}
+
+function load_videos()
+{
+  $.ajax({
+    type: "GET",
+    url: $('#vimeo_videos_url')[0].value,
+    dataType: "jsonp",
+    success: function(videos, status, ajax) {
+      if (videos) {
+        megaplaya.api_playQueue(videos);
+      }
+    }
+   });
+}
+</pre></code>
+</div>
+
+<div class="clear"><br /></div>
 
 ### [Player setup using jQuery](#setup)
 
