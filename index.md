@@ -9,8 +9,6 @@ title: VHX API docs (beta)
 <div style="text-align:center">Greetings, programs.</div>
 
 
-## [Getting Started](#getting-started)
-
 The VHX API and this documentation are currently _Hella Beta_. Please don't hesitate to contact us [via email](mailto:dev@vhx.tv) or through our [contact form](http://vhx.tv/feedback).
 
 Join the [VHXdev mailing list](https://groups.google.com/group/vhx-api) for announcements and general discussion.
