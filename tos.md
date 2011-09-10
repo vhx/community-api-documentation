@@ -4,10 +4,10 @@ title: Terms of Service
 ---
 
 # VHX API Terms of Service
-Thank you for using the VHX application programming interface (the “VHX API”).
+Thank you for using the VHX application programming interface (the "VHX API").
 
-This is an agreement between you and VHX Inc. (“VHX”). Sometimes VHX is referred to as “we,” “us” or “our”. By using the VHX API, you
-agree to these terms of service (the “Terms of Service”) and the VHX Terms of Use (“TOU”) located at
+This is an agreement between you and VHX Inc. ("VHX"). Sometimes VHX is referred to as "we," "us" or "our". By using the VHX API, you
+agree to these terms of service (the "Terms of Service") and the VHX Terms of Use ("TOU") located at
 [http://dev.vhx.tv/tos.html](http://dev.vhx.tv/tos.html). If you disagree with any of the terms below or the TOU, VHX does not grant you a license to use the VHX API. In the event of any inconsistency between these Terms of Service and the TOU, these Terms of Service control.
 
 VHX reserves the right to update and change, from time to time, these Terms of Service and all documents incorporated by reference. You can always find the most recent version of these Terms of Service at [http://dev.vhx.tv/tos.html](http://dev.vhx.tv/tos.html). VHX may change these Terms of Service by posting a new version without notice to you. Use of the VHX API after such change constitutes acceptance of such changes.
@@ -36,15 +36,15 @@ b. Use of Computer Code. Unless otherwise specified, use and redistribution of a
   documentation and/or other materials provided with the distribution.
   iv. Neither the name of VHX nor the names of its contributors may be used to name, endorse or promote products derived from this software without specific prior written permission of VHX.
 
-DISCLAIMER TO BE INCLUDED WITH GENI COMPUTER CODE:
+DISCLAIMER TO BE INCLUDED WITH VHX COMPUTER CODE:
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-c. Branding. If your product or service uses or is based upon the VHX API, and you wish to include VHX branding or logos, please contact us at api@geni.com . Absent express written permission from us, you may not use VHX branding, except as outlined in section 3(b) below.
+c. Branding. If your product or service uses or is based upon the VHX API, and you wish to include VHX branding or logos, please contact us at dev@vhx.tv . Absent express written permission from us, you may not use VHX branding, except as outlined in section 3(b) below.
 
 d. Rate Limits and Data Fields Restrictions. You understand that there is a rate limit and a restriction to the data fields displayed per application
 or service utilizing the VHX API and you agree that you shall comply with that rate limit and restriction to the data fields at all times. The rate
-limits and retrictions are described in the VHX API Documentation, available at http://dev.vhx.tv/. These rate limits and restrictions are subject to change from time to time at VHX’s sole discretion, effective immediately upon posting. VHX may, in its sole discretion, limit the: (i) rate at which the service, or any subset of it, may be called, (ii) the amount of storage made available to each service account, or (iii) the length of individual content segments that may be uploaded to, or served from, the service (all of the foregoing being forms of “Throttling”). VHX may perform this Throttling globally across the entire VHX API, per end user, or on any other basis. You will not take steps to circumvent any technical measures we may put in place to enforce Throttling, and You understand and agree that programmatic methods intended to subvert rate limiting (including maintaining a cache of the data) are considered a violation of these Terms of Service.
+limits and retrictions are described in the VHX API Documentation, available at http://dev.vhx.tv/. These rate limits and restrictions are subject to change from time to time at VHX’s sole discretion, effective immediately upon posting. VHX may, in its sole discretion, limit the: (i) rate at which the service, or any subset of it, may be called, (ii) the amount of storage made available to each service account, or (iii) the length of individual content segments that may be uploaded to, or served from, the service (all of the foregoing being forms of "Throttling"). VHX may perform this Throttling globally across the entire VHX API, per end user, or on any other basis. You will not take steps to circumvent any technical measures we may put in place to enforce Throttling, and You understand and agree that programmatic methods intended to subvert rate limiting (including maintaining a cache of the data) are considered a violation of these Terms of Service.
 
 e. Modifications. VHX reserves the right to release subsequent versions of the VHX API and to require You to obtain and use the most recent version. If a modification is unacceptable to You, You may cancel the Service by removing the VHX API code from Your Site. If You continue to use the Service, You will be deemed to have accepted the modifications.
 
@@ -52,9 +52,9 @@ f. Limitations and Conditions of the service. We may use technology or other mea
 
 ## 3. Proprietary Rights
 
-a. VHX Rights. For purposes of the Terms of Service, “Intellectual Property Rights” shall mean any and all rights existing from time to time under patent law, copyright law, semiconductor chip protection law, moral rights law, trade secret law, trademark law, unfair competition law, publicity rights law, privacy rights law, and any and all other proprietary rights, and any and all applications, renewals, extensions and restorations thereof, now or hereafter in force and effect worldwide. As between You and VHX, You acknowledge that VHX or its licensors own all right, title and interest, including without limitation all Intellectual Property Rights, in and to the VHX API and all output and executables of the VHX API (excluding any software components developed by you which do not themselves incorporate the VHX API or any output or executables of the VHX API) and that You shall not acquire any right, title, or interest in or to the VHX API, except as expressly set forth in the Terms of Service.
+a. VHX Rights. For purposes of the Terms of Service, "Intellectual Property Rights" shall mean any and all rights existing from time to time under patent law, copyright law, semiconductor chip protection law, moral rights law, trade secret law, trademark law, unfair competition law, publicity rights law, privacy rights law, and any and all other proprietary rights, and any and all applications, renewals, extensions and restorations thereof, now or hereafter in force and effect worldwide. As between You and VHX, You acknowledge that VHX or its licensors own all right, title and interest, including without limitation all Intellectual Property Rights, in and to the VHX API and all output and executables of the VHX API (excluding any software components developed by you which do not themselves incorporate the VHX API or any output or executables of the VHX API) and that You shall not acquire any right, title, or interest in or to the VHX API, except as expressly set forth in the Terms of Service.
 
-b. Brand Feature License. For purposes of the Terms of Service, “Brand Features” shall be defined as the trade names, trademarks, service marks, logos, domain names, and other distinctive brand features of each party, respectively, as secured by such party from time to time. VHX hereby grants to You a nontransferable, nonsublicenseable, nonexclusive license during the Term to display VHX’s Brand Features for the purpose of promoting or advertising that You use the Service in accordance with this Section 3(b) and for the purpose of fulfilling Your obligations under Section 3(c) below. You hereby grant to VHX a nontransferable, nonexclusive license during the Term to use Your Brand Features to advertise that You are using the VHX API.
+b. Brand Feature License. For purposes of the Terms of Service, "Brand Features" shall be defined as the trade names, trademarks, service marks, logos, domain names, and other distinctive brand features of each party, respectively, as secured by such party from time to time. VHX hereby grants to You a nontransferable, nonsublicenseable, nonexclusive license during the Term to display VHX’s Brand Features for the purpose of promoting or advertising that You use the Service in accordance with this Section 3(b) and for the purpose of fulfilling Your obligations under Section 3(c) below. You hereby grant to VHX a nontransferable, nonexclusive license during the Term to use Your Brand Features to advertise that You are using the VHX API.
 
 In using VHX Brand Features, you may not:
 
@@ -72,7 +72,7 @@ Except as set forth in this Section 3(b), nothing in the Terms of Service shall 
 
 c. Attribution; Legal Notices. The images provided to You through the VHX API may contain the trade names, trademarks, service marks, logos, domain names, and other distinctive brand features of VHX and its partners. You may not delete or in any manner alter these trade names, trademarks, service marks, logos, domain names, and other distinctive brand features. You agree to maintain, and not to remove, modify, obscure or alter, any link or notices appearing on any image provided through the Service. You acknowledge and agree that these Legal Notices supplement the Terms of Service for the VHX API.
 
-d. Digital Millennium Copyright Act. It is VHX's policy to respond to notices of alleged infringement that comply with the Digital Millennium Copyright Act (“DMCA”). For directions and more information, please see the DMCA Notice section of the TOU.
+d. Digital Millennium Copyright Act. It is VHX's policy to respond to notices of alleged infringement that comply with the Digital Millennium Copyright Act ("DMCA"). For directions and more information, please see the DMCA Notice section of the TOU.
 
 ## 4. Code of Conduct
 
@@ -134,30 +134,30 @@ g. Security Reviews. VHX will have the right, at its own expense, to review, or 
 
 ## 6. Support.
 
-VHX may elect to provide you with support or modifications for the VHX API (collectively, “Support”), in its sole discretion, and may terminate such Support at any time without notice to you. VHX may change, suspend, or discontinue any aspect of the VHX API at any time, including the availability of the VHX API. VHX may also impose limits on certain features and services or restrict your access to parts or all of the VHX API or the VHX Web site without notice or liability.
+VHX may elect to provide you with support or modifications for the VHX API (collectively, "Support"), in its sole discretion, and may terminate such Support at any time without notice to you. VHX may change, suspend, or discontinue any aspect of the VHX API at any time, including the availability of the VHX API. VHX may also impose limits on certain features and services or restrict your access to parts or all of the VHX API or the VHX Web site without notice or liability.
 
 ## 7. Fees and Payments.
 
-VHX reserves the right to charge fees for future use of or access to the VHX API or the VHX services and Web sites (collectively, “VHX API Services”) in VHX’s sole discretion. If VHX decides to charge for the VHX API Services, such charges will be disclosed to you by prior written notice.
+VHX reserves the right to charge fees for future use of or access to the VHX API or the VHX services and Web sites (collectively, "VHX API Services") in VHX’s sole discretion. If VHX decides to charge for the VHX API Services, such charges will be disclosed to you by prior written notice.
 
 ## 8. Disclaimer of Any Warranty.
 
-THE VHX API IS PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS WITH NO WARRANTY, EXPRESS OR IMPLIED, OF ANY KIND. GENI EXPRESSLY DISCLAIMS ANY AND ALL WARRANTIES AND CONDITIONS, INCLUDING, BUT NOT LIMITED TO, ANY IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AVAILABLILTIY, SECURITY, TITLE AND NON-INFRINGEMENT.
+THE VHX API IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITH NO WARRANTY, EXPRESS OR IMPLIED, OF ANY KIND. VHX EXPRESSLY DISCLAIMS ANY AND ALL WARRANTIES AND CONDITIONS, INCLUDING, BUT NOT LIMITED TO, ANY IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AVAILABLILTIY, SECURITY, TITLE AND NON-INFRINGEMENT.
 
-GENI DOES NOT REPRESENT OR WARRANT THAT THE GENI API IS FREE OF INACCURACIES, ERRORS, BUGS, OR INTERRUPTIONS, OR IS RELIABLE, ACCURATE, COMPLETE, OR OTHERWISE VALID. GENI MAKES NO WARRANTY THAT (i) THE GENI API WILL MEET YOUR REQUIREMENTS, (ii) THE GENI API SERVICE WILL BE UNINTERRUPTED, (iii) THE RESULTS THAT MAY BE OBTAINED FROM THE USE OF THE GENI API SERVICE WILL BE ACCURATE OR RELIABLE, (iv) THE QUALITY OF ANY PRODUCTS, SERVICES, INFORMATION, OR OTHER MATERIAL OBTAINED BY YOU THROUGH THE GENI API WILL MEET YOUR EXPECTATIONS, AND (v) ANY ERRORS IN THE GENI API WILL BE CORRECTED.
+VHX DOES NOT REPRESENT OR WARRANT THAT THE VHX API IS FREE OF INACCURACIES, ERRORS, BUGS, OR INTERRUPTIONS, OR IS RELIABLE, ACCURATE, COMPLETE, OR OTHERWISE VALID. VHX MAKES NO WARRANTY THAT (i) THE VHX API WILL MEET YOUR REQUIREMENTS, (ii) THE VHX API SERVICE WILL BE UNINTERRUPTED, (iii) THE RESULTS THAT MAY BE OBTAINED FROM THE USE OF THE VHX API SERVICE WILL BE ACCURATE OR RELIABLE, (iv) THE QUALITY OF ANY PRODUCTS, SERVICES, INFORMATION, OR OTHER MATERIAL OBTAINED BY YOU THROUGH THE VHX API WILL MEET YOUR EXPECTATIONS, AND (v) ANY ERRORS IN THE VHX API WILL BE CORRECTED.
 
-YOUR USE OF THE GENI API IS AT YOUR OWN DISCRETION AND RISK, AND YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE THAT RESULTS FROM THE USE OF ANY GENI API INCLUDING, BUT NOT LIMITED TO, ANY DAMAGE TO YOUR COMPUTER SYSTEM OR LOSS OF DATA.
+YOUR USE OF THE VHX API IS AT YOUR OWN DISCRETION AND RISK, AND YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE THAT RESULTS FROM THE USE OF ANY VHX API INCLUDING, BUT NOT LIMITED TO, ANY DAMAGE TO YOUR COMPUTER SYSTEM OR LOSS OF DATA.
 
 ## 9. Limitation of Liability.
 
-GENI SHALL NOT, UNDER ANY CIRCUMSTANCES, BE LIABLE TO YOU FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, LOST PROFITS, SPECIAL OR EXEMPLARY DAMAGES ARISING OUT OF OR IN CONNECTION WITH USE OF THE GENI API, WHETHER BASED ON BREACH OF CONTRACT, BREACH OF WARRANTY, TORT (INCLUDING NEGLIGENCE, PRODUCT LIABILITY OR OTHERWISE), OR ANY OTHER PECUNIARY LOSS, WHETHER OR NOT GENI HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. UNDER NO CIRCUMSTANCES SHALL GENI BE LIABLE TO YOU FOR ANY AMOUNT.
+VHX SHALL NOT, UNDER ANY CIRCUMSTANCES, BE LIABLE TO YOU FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, LOST PROFITS, SPECIAL OR EXEMPLARY DAMAGES ARISING OUT OF OR IN CONNECTION WITH USE OF THE VHX API, WHETHER BASED ON BREACH OF CONTRACT, BREACH OF WARRANTY, TORT (INCLUDING NEGLIGENCE, PRODUCT LIABILITY OR OTHERWISE), OR ANY OTHER PECUNIARY LOSS, WHETHER OR NOT VHX HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. UNDER NO CIRCUMSTANCES SHALL VHX BE LIABLE TO YOU FOR ANY AMOUNT.
 
 Some jurisdictions do not allow the exclusion or limitation of liability for incidental or consequential damage, so the above limitations or
 exclusions may not apply to you.
 
 ## 10. Release and Waiver.
 
-To the maximum extent permitted by applicable law, you hereby release and waive all claims against VHX, and its subsidiaries, affiliates, officers, agents, licensors, co-branders or other partners, and employees from any and all liability for claims, damages (actual and/or consequential), costs and expenses (including litigation costs and attorneys’ fees) of every kind and nature, arising from or in any way related to your use of VHX API. If you are a California resident, you waive your rights under California Civil Code § 1542, which states, “A general release does not extend to claims which the creditor does not know or suspect to exist in his favor at the time of executing the release, which if known by him must have materially affected his settlement with the debtor.” You understand that any fact relating to any matter covered by this release may be found to be other than now believed to be true and you accept and assume the risk of such possible differences in fact. In addition, you expressly waive and relinquish any and all rights and benefits that you may have under any other state or federal statute or common law principle of similar effect, to the fullest extent permitted by law.
+To the maximum extent permitted by applicable law, you hereby release and waive all claims against VHX, and its subsidiaries, affiliates, officers, agents, licensors, co-branders or other partners, and employees from any and all liability for claims, damages (actual and/or consequential), costs and expenses (including litigation costs and attorneys’ fees) of every kind and nature, arising from or in any way related to your use of VHX API. If you are a California resident, you waive your rights under California Civil Code § 1542, which states, "A general release does not extend to claims which the creditor does not know or suspect to exist in his favor at the time of executing the release, which if known by him must have materially affected his settlement with the debtor." You understand that any fact relating to any matter covered by this release may be found to be other than now believed to be true and you accept and assume the risk of such possible differences in fact. In addition, you expressly waive and relinquish any and all rights and benefits that you may have under any other state or federal statute or common law principle of similar effect, to the fullest extent permitted by law.
 
 ## 11. Indemnification.
 
@@ -185,7 +185,7 @@ This Agreement is in electronic form. We have promised to send You certain infor
 
 Notices provided to You via email will be deemed given and received on the transmission date of the email. As long as You can access and use the service, You have the necessary software and hardware to receive these notices. If You do not consent to receive any notices electronically, You must stop using the service.
 
-Any notice from You will be sent electronically to: api@geni.com
+Any notice from You will be sent electronically to: dev@vhx.tv
 
 ## 17. No Waiver of Rights by VHX.
 
@@ -193,7 +193,7 @@ VHX’s failure to exercise or enforce any right or provision of the Terms of Se
 
 ## 18. Choice of Law; Location for Resolving Disputes.
 
-The Terms of Service and the relationship between you and VHX shall be governed by the laws of the State of California without regard to its conflict of law provisions. You and VHX irrevocably consent to the exclusive jurisdiction and venue of the state or federal courts in Los Angeles County, California, USA for all disputes arising out of or relating to this Agreement.
+The Terms of Service and the relationship between you and VHX shall be governed by the laws of the State of California without regard to its conflict of law provisions. You and VHX irrevocably consent to the exclusive jurisdiction and venue of the state or federal courts in New York, New York, USA for all disputes arising out of or relating to this Agreement.
 
 ## 19. Entire Agreement
 

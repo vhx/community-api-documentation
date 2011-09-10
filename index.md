@@ -11,29 +11,26 @@ title: VHX API docs (beta)
 
 <div class="col" markdown="1" style="background: #1a1a1a url('http://sht.tl/ynSeC') 10px 120px no-repeat;" onclick="location.href='#general_api_info'">
   <div class="title">1) Videos!</div>
-  Easily grab all information about any video on the web
+  Read and write videos to VHX accounts, including sharing, liking, queueing and more.
 </div>
 <div class="col col2" markdown="1" style="background: #1a1a1a url('http://sht.tl/aCSEr') -20px 0 no-repeat;" onclick="location.href='#playlists'">
   <div class="title">2) Make Playlists</div>
-  Make playlists of videos and watch them in a fun, mixtape-like experience. [Here's an example](http://vhx.tv/casey/music-videos)
+  Collect videos into fun, continous-playing video mixtapes. [Here's an example](http://vhx.tv/casey/music-videos)
 </div>
 <div class="col col3" markdown="1" style="background: #1a1a1a url('http://sht.tl/9VgT') -120px -40px no-repeat;" onclick="location.href='/video-player.html'">
   <div class="title">3) VHX Player</div>
-  Use our embeddable player to play any type of video on the fly in a seamless, back-to-back experience. [Try it out](/video-player.html)
+  Use our embeddable player to playback any type of video on the fly with a seamless, back-to-back experience. [Try it out](/video-player.html)
 </div>
 <div class="clear">&nbsp;</div>
 
-The VHX API and this documentation are currently in _BETA_. Please don't hesitate to contact us [via email](mailto:dev@vhx.tv) or through our [contact form](http://vhx.tv/feedback). OAuth2 support coming soon.
+The VHX API and this documentation are currently in _BETA_. Please contact us [via email](mailto:dev@vhx.tv) or through our [contact form](http://vhx.tv/feedback) with any issues or suggestions. OAuth2 support coming soon.
 
 <br />
 
-Join the [VHXdev mailing list](https://groups.google.com/group/vhx-api) for announcements and general discussion.
-
-Chat with us on IRC: [irc.freenode.net/#vhx](irc://irc.freenode.net/#vhx)
-
-Follow us on Twitter: [@vhxtv](http://twitter.com/vhxtv)
-
-Follow our Tumblr: [blog.vhx.tv](http://blog.vhx.tv)
+* Join the [VHXdev mailing list](https://groups.google.com/group/vhx-api) for announcements and general discussion.
+* Chat with us on IRC: [irc.freenode.net/#vhx](irc://irc.freenode.net/#vhx) -- and say hi to [our bot](http://github.com/jamiew/fatbot)
+* Follow us on Twitter: [@vhxtv](http://twitter.com/vhxtv)
+* Follow our Tumblr: [blog.vhx.tv](http://blog.vhx.tv)
 
 ## [Let's get started]
 
@@ -48,18 +45,23 @@ Follow our Tumblr: [blog.vhx.tv](http://blog.vhx.tv)
   * __page__ -- currently all paged result sets contain 50 results
   * __url__ -- all video-adding methods (share, queue, like, etc.) accept either an __?id__ parameter or a __?url__ paramter. This lets you easily specify a native VHX video ID or an arbitrary YouTube or Vimeo URL
 
-### [User Authentication](#user_authentication)
-
-We currently use a simple API tokens to authenticate you as a user with plans to add full OAuth2 support. Just specify "login" and "api_token" parameters with your request:
-
-* __login__ -- can be username (jamiew) or email address (jamie@vhx.tv)
-* __api_token__ -- can be found on <http://vhx.tv/settings>
 
 ### [App Registration](#app_registration)
 
 We don't currently require you to formally register your app, but you are required to specify an identifying __app_id__ parameter with your requests. e.g:
 
     curl http://api.vhx.tv/jamiew.json?app_id=testbed_app
+
+
+### [User Authentication](#user_authentication)
+
+We currently use simple API tokens to authenticate you as a user, and plan to add full OAuth2 support.
+
+Just specify "login" and "api_token" parameters with your request:
+
+* __login__ -- can be username (jamiew) or email address (jamie@vhx.tv)
+* __api_token__ -- can be found on <http://vhx.tv/settings>
+
 
 ### [curl samples](#curl_samples)
 
@@ -128,16 +130,18 @@ _public_
 
 ### [Playlists](#playlists)
 
+Yes, we support [animated GIFs](http://vhx.tv/casey/robocop)!
+
 _public_
 
-    GET http://api.vhx.tv/playlists.json          -- all playlists
-    GET http://api.vhx.tv/playlists/:id.json      -- playlist details
-    GET http://api.vhx.tv/:user_id/:id.json       -- alternate URL for above (e.g. /jamiew/turntablism.json)
+    GET http://api.vhx.tv/playlists.json        -- all playlists
+    GET http://api.vhx.tv/playlists/:id.json    -- playlist details
+    GET http://api.vhx.tv/:user_id/:id.json     -- alternate URL for above (e.g. /jamiew/turntablism.json)
 
 _auth required_
 
-    POST http://api.vhx.tv/playlists.json         -- create playlist. attributes: title, description, image, color (ff00ff)
-    PUT http://api.vhx.tv/playlists/:id.json      -- update playlist's attributes
+    POST http://api.vhx.tv/playlists.json       -- create playlist. attributes: title, description, image, color (ff00ff)
+    PUT http://api.vhx.tv/playlists/:id.json    -- update playlist's attributes
 
     POST http://api.vhx.tv/playlists/:id/videos                 -- add a video to specified playlist (pass :url or :video_id)
     DELETE http://api.vhx.tv/playlists/:id/videos/:video_id     -- remove video from playlist
@@ -166,7 +170,7 @@ _auth required_
 
 If user has linked their Facebook, Tumblr or Twitter accounts VHX will import videos shared by their friends:
 
-*auth required
+_auth required_
 
     GET http://api.vhx.tv/facebook.json
     GET http://api.vhx.tv/twitter.json
@@ -176,7 +180,7 @@ If user has linked their Facebook, Tumblr or Twitter accounts VHX will import vi
 
 ### [Rate Limits](#rate_limits)
 
-Currently we allow 86k API requests per (app + IP address) combo per day, which is 1 request per second. The day window is not rolling, and expires at midnight UTC each day.
+Currently we allow up to 86k API requests per IP per day (approximately 1 request per second). We also throttle clients that are making requests too quickly -- more than 2 per second. The "day" windowexpires at midnight UTC each day.
 
 If you've exceeded the rate limits you'll receive a __403 Forbidden__ response code.
 
@@ -191,8 +195,9 @@ If you are rocking out and need your limits bumped don't hesitate to [contact us
 
 ### [CHANGELOG](#changelog)
 
-* __r4__ [2011-09-08]: megaplaya documentation added
-* __r3__ [2011-09-07]: documentation updates
+* __r5__ [2011-09-08]: megaplaya documentation added
+* __r4__ [2011-09-07]: added basic playlists info.
+* __r3__ [2011-09-06]: documentation updates
 * __r2__ [2011-09-01]: added playlists
 * __r1__ [2011-07-25]: initial commit
 
@@ -201,6 +206,7 @@ If you are rocking out and need your limits bumped don't hesitate to [contact us
 
 * OAuth2 support (we will grandfather in apps using api_tokens)
 * Client libraries -- ruby, python, PHP, javascript (node.js)
+* Interactive API demos (hurl-style)
 * More sample code and example apps! [Send us yours](mailto:team@vhx.tv)
 
 
