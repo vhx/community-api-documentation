@@ -9,13 +9,13 @@ title: VHX API docs (beta)
   <img align="center" src="http://vhx.tv/images/spacecat-cropped.png" alt="Spacecat" title="Spacecat" style="text-align:center;height: 100px; padding-right: 12px; " />
 </div>
 
-<div class="col" markdown="1" style="background: #1a1a1a url('http://sht.tl/ynSeC') 10px 120px no-repeat;" onclick="location.href='#general_api_info'">
+<div class="col" markdown="1" style="background: #1a1a1a url('http://sht.tl/ynSeC') 10px 135px no-repeat;" onclick="location.href='#general_api_info'">
   <div class="title">1) Videos!</div>
   Read and write videos to VHX accounts, including sharing, liking, queueing and more.
 </div>
 <div class="col col2" markdown="1" style="background: #1a1a1a url('http://sht.tl/aCSEr') -20px 0 no-repeat;" onclick="location.href='#playlists'">
   <div class="title">2) Make Playlists</div>
-  Collect videos into fun, continous-playing video mixtapes. [Here's an example](http://vhx.tv/casey/music-videos)
+  Collect videos into fun, continous -playing video mixtapes. [Here's an example](http://vhx.tv/casey/music-videos)
 </div>
 <div class="col col3" markdown="1" style="background: #1a1a1a url('http://sht.tl/9VgT') -120px -40px no-repeat;" onclick="location.href='/video-player.html'">
   <div class="title">3) VHX Player</div>

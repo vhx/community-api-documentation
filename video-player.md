@@ -10,10 +10,10 @@ title: VHX API docs (beta)
     function() {
       $('#vhx_megaplaya').flash({
         swf: 'http://vhx.tv/embed/megaplaya',
-        width: 500,
+        width: 450,
         allowFullScreen: true,
         allowScriptAccess: "always",
-        height: 375
+        height: 337
       });
     }
   );
@@ -46,22 +46,22 @@ The below example loads all our VHX fan-made bumper videos from [vimeo.com/vhx/v
 
 <div id="player_demo">
   <div markdown="1">
-    <input id="vimeo_videos_url" type="text" value="http://vimeo.com/api/v2/vhx/videos.json" style="width:330px;" />
+    <input id="vimeo_videos_url" class="field" type="text" value="http://vimeo.com/api/v2/vhx/videos.json" style="width:280px;" />
     <input type="button" class="btn" onclick="load_videos()" style="width: 140px;" value="Load videos" />
   </div>
   <div id="vhx_megaplaya">Loading...</div>
 </div>
 
 <div id="player_demo_code">
-<code><pre>
+<pre><code>
 $(document).ready(
   function() {
     $('#vhx_megaplaya').flash({
       swf: 'http://vhx.tv/embed/megaplaya',
-      width: 500,
+      width: 450,
       allowFullScreen: true,
       allowScriptAccess: "always",
-      height: 375
+      height: 337
     });
   }
 );
@@ -86,7 +86,7 @@ function load_videos()
     }
    });
 }
-</pre></code>
+</code></pre>
 </div>
 
 <div class="clear"><br /></div>
