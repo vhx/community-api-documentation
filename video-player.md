@@ -53,7 +53,7 @@ The below example loads all our VHX fan-made bumper videos from [vimeo.com/vhx/v
 </div>
 
 <div id="player_demo_code">
-<pre><code>
+<pre>
 $(document).ready(
   function() {
     $('#vhx_megaplaya').flash({
@@ -87,7 +87,7 @@ function load_videos()
     }
    });
 }
-</code></pre>
+</pre>
 </div>
 
 <div class="clear"><br /></div>
@@ -172,7 +172,7 @@ Below is the list of available JS api hooks. Please don't hesitate to send us bu
     // call this to check if player is loaded. Megaplaya also calls megaplaya_loaded()
     api_isLoaded():Boolean
 
-    api_addEventListener(event_name:String, callback_js_fn:String):void
+    api_addListener(event_name:String, callback_js_fn:String):void
       onVideoFinish
       onVideoLoad
       onKeyboardDown // Use this to implement your own keyboard controls
