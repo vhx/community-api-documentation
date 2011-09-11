@@ -73,6 +73,7 @@ function megaplaya_loaded()
   megaplaya = $('#vhx_megaplaya').children()[0];
 }
 
+// Load videos from Vimeo using JSONp callback
 function load_videos()
 {
   $.ajax({
@@ -93,15 +94,16 @@ function load_videos()
 
 ### [Player setup using jQuery](#setup)
 
-For this demo, we're using jQuery, but you can use whatever you want.
+For this demo, we're using jQuery, but you can use whatever you want. SWFObject is used for .flash()
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
 
-This is the Megaplaya SWF URL
+This is the Megaplaya SWF URL:
 
     http://vhx.tv/embed/megaplaya
 
-Now inject the SWF into your page.
+Now add a #vhx_megaplaya div and inject the SWF into your page.
 
     <div id="vhx_megaplaya"></div>
 
@@ -132,7 +134,7 @@ Megaplaya automatically calls **megaplaya_loaded()** when it's ready. You may al
 
 ### [Let's play some videos](#example)
 
-Simply pass an array of objects that each contain a video url to megaplaya. It's as simple as that.
+Simply pass an array of objects that each contain a video url to megaplaya, either inside of megaplay_loaded() or after it's fully loaded.
 
     megaplaya.api_playQueue([
       { url: 'http://www.youtube.com/watch?v=sgKUS9AFemc' },
