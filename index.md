@@ -15,11 +15,11 @@ title:
 </div>
 <div class="col col2" markdown="1" style="background: #1a1a1a url('http://sht.tl/aCSEr') -20px 0 no-repeat;" onclick="location.href='#playlists'">
   <div class="title">2) Make Playlists</div>
-  Collect videos into fun, continous -playing video mixtapes. [Here's an example](http://vhx.tv/casey/music-videos)
+  Organize videos into fun, continous-play video mixtapes, with support for animated GIF album art. [Here's an example](http://vhx.tv/casey/music-videos)
 </div>
 <div class="col col3" markdown="1" style="background: #1a1a1a url('http://sht.tl/9VgT') -120px -40px no-repeat;" onclick="location.href='/video-player.html'">
-  <div class="title">3) VHX Player</div>
-  Use our embeddable player to playback any type of video on the fly with a seamless, back-to-back experience. [Try it out](/video-player.html)
+  <div class="title">3) Embeddable Player</div>
+  Just send our player a list of URLs for back-to-back playback experience. [Try it out](/video-player.html)
 </div>
 <div class="clear">&nbsp;</div>
 
@@ -37,59 +37,64 @@ The VHX API and this documentation are currently in _BETA_. Please contact us [v
 ### [General API info](#general_api_info)
 
 * Response formats: __.json__ and __.xml__
-* JSON requests allow a __callback__ parameter to specify a javascript callback (JSONp)
+* We follow REST conventions as much as possible, using nested resource URLs and HTTP verbs for actions:
+  * GET => fetch things
+  * POST => create things
+  * PUT => update things
+  * DELETE => remove things
 
-* Common parameters:
+* Common (but optional) parameters:
+  * __url__ -- all video-adding methods (share, queue, like, etc.) accept either an __?id__ parameter or a __?url__ paramter. This lets you easily specify a native VHX video ID or an arbitrary YouTube or Vimeo URL
+  * __page__ -- currently all paged result sets contain 50 results
+  * __callback__ -- optional parameter for JSON requests to wrap the data in a javascript callback (JSONp)
+  * __app_id__ -- a simple string identifying your application, e.g. "my_new_vidrecommender"
+
+* Authentication parameters:
   * __login__ -- authenticating user's username (jamiew) or email address (jamie@vhx.tv)
   * __api_token__ -- authenticating user's API token, found on <http://vhx.tv/settings>
-  * __page__ -- currently all paged result sets contain 50 results
-  * __url__ -- all video-adding methods (share, queue, like, etc.) accept either an __?id__ parameter or a __?url__ paramter. This lets you easily specify a native VHX video ID or an arbitrary YouTube or Vimeo URL
-
-
-### [App Registration](#app_registration)
-
-We don't currently require you to formally register your app, but you are required to specify an identifying __app_id__ parameter with your requests. e.g:
-
-    curl http://api.vhx.tv/jamiew.json?app_id=testbed_app
 
 
 ### [User Authentication](#user_authentication)
 
-We currently use simple API tokens to authenticate you as a user, and plan to add full OAuth2 support.
-
-Just specify "login" and "api_token" parameters with your request:
+We currently use simple API tokens to authenticate you as a user. Just specify "login" and "api_token" parameters with your requests:
 
 * __login__ -- can be username (jamiew) or email address (jamie@vhx.tv)
 * __api_token__ -- can be found on <http://vhx.tv/settings>
 
+We plan to add full OAuth2 support soon.
 
-### [curl samples](#curl_samples)
+### [App Registration](#app_registration)
+
+We don't currently require you to formally register your app, but request that you identify your __app_id__ parameter with your requests will raise your rate limits (and make sure we don't ban you).
+
+    curl http://api.vhx.tv/jamiew.json?app_id=testbed_app
+
+
+### [Just show me the 'curl' examples](#just_show_me_the_curl_examples)
 
 Get all the videos shared by [@staff](http://vhx.tv/staff/shared):
 
-    curl http://api.vhx.tv/staff/shared.json?app_id=test
+    curl http://api.vhx.tv/staff/shared.json
 
 
 Get queued videos for the current user, authenticating as __@jamiew__:
 
-    curl http://api.vhx.tv/queue.json?app_id=test&login=jamiew&api_token=[SECRET]
+    curl http://api.vhx.tv/queue.json?login=jamiew&api_token=[SECRET]
 
 
 Add <http://vimeo.com/123456> to my queue, authenticating as __@jamiew__:
 
-    curl -d app_id=test \
-      -d url=http://vimeo.com/123456 \
+    curl -d url=http://vimeo.com/123456 \
       -d login=jamiew \
       -d api_token=[SECRET] \
       http://api.vhx.tv/videos/queue.json
 
-Share that same video, with a simple urlencoded comment:
+Share that same video, with a simple urlencoded comment. First video posted on Vimeo!:
 
-    curl -d app_id=test \
-        -d url=http://vimeo.com/2 \
+    curl -d url=http://vimeo.com/2 \
         -d login=jamiew \
         -d api_token=SECRET \
-        -d comment=First+video+on+vimeo \
+        -d comment=First+video+posted+on+Vimeo \
         http://api.vhx.tv/videos/share.json
 
 
@@ -193,20 +198,11 @@ Every API response contains the following HTTP headers to let you know about rat
 If you are rocking out and need your limits bumped don't hesitate to [contact us](mailto:team@vhx.tv?subject=I+need+more+API+requests).
 
 
-### [CHANGELOG](#changelog)
-
-* __r5__ [2011-09-08]: megaplaya documentation added
-* __r4__ [2011-09-07]: added basic playlists info.
-* __r3__ [2011-09-06]: documentation updates
-* __r2__ [2011-09-01]: added playlists
-* __r1__ [2011-07-25]: initial commit
-
-
 ### [Roadmap](#roadmap)
 
-* OAuth2 support (we will grandfather in apps using api_tokens)
-* Client libraries -- ruby, python, PHP, javascript (node.js)
-* Interactive API demos (hurl-style)
+* OAuth2 support -- we will grandfather in apps using api_tokens
+* Client libraries: Ruby, Python, PHP, Javascript (node.js)
+* Interactive API demos, hurl-style
 * More sample code and example apps! [Send us yours](mailto:team@vhx.tv)
 
 
@@ -214,8 +210,9 @@ If you are rocking out and need your limits bumped don't hesitate to [contact us
 
 * YouTube
 * Vimeo
+* Raw video files (h264 or FLV)
 
-We have near-term plans to add support for several other video hosting sites as well as raw video files. [Contact us](mailto:dev@vhx.tv) if you'd like us to support your site. Direct video file access preferred. Flash/AS3-friendly video player APIs also make us happy.
+We have near-term plans to add support for several other major video hosting sites. [Contact us](mailto:dev@vhx.tv) if you'd like us to support your site. Direct video file access preferred. Flash/AS3-friendly video player APIs also make us happy.
 
 
 ### [Legal](#legal)
