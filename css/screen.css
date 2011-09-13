@@ -327,6 +327,9 @@ pre {
 b, strong { font-weight: bold; }
 em, i { font-style: italic; }
 
+.app { margin: 20px; display:block;}
+.app img { margin-right: 20px; }
+
 #footer small { clear: both; display: block; font-size: 8pt; margin-top: 20px; }
 #footer ul { text-align: center; margin: 0 auto; }
 #footer ul li { list-style: none; display: inline; margin: 0; padding: 0 10px 0 0; }

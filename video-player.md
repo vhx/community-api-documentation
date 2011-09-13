@@ -1,6 +1,6 @@
 ---
 layout: default
-title: VHX API docs (beta)
+title: Megaplaya -
 ---
 
 ## Megaplaya
@@ -123,7 +123,7 @@ Now add a #vhx_megaplaya div and inject the SWF into your page.
 
 ### [Megaplaya loaded](#megaplaya-loaded)
 
-Megaplaya automatically calls **megaplaya_loaded()** when it's ready. You may also call **api_isLoaded()** to check if the player has loaded already.
+Megaplaya automatically calls **megaplaya_loaded()** when it's ready. You may also call **api_isLoaded()** to check if the player has loaded already. You must wait until the player is loaded before you can make any API calls.
 
     var megaplaya = false;
     function megaplaya_loaded()
@@ -180,8 +180,8 @@ Below is the list of available JS api hooks. Please don't hesitate to send us bu
       onPause
       onPlay
       onFullscreen
-      onNextVideo
-      onPrevVideo
+      onPlaybarShow   // triggers when the VHX playbar shows itself
+      onPlaybarHide   // triggers when the VHX playbar hides itself
 
     api_growl():void  // A simple growl message that appears at the top of the player
     api_warn():void   // same as above, but in red

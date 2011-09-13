@@ -1,6 +1,6 @@
 ---
 layout: default
-title: VHX API docs (beta)
+title:
 ---
 
 ## [Greetings, programs]
