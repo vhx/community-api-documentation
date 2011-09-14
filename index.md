@@ -38,10 +38,10 @@ The VHX API and this documentation are currently in _BETA_. Please contact us [v
 
 * Response formats: __.json__ and __.xml__
 * We follow REST conventions as much as possible, using nested resource URLs and HTTP verbs for actions:
-  * GET => fetch things
-  * POST => create things
-  * PUT => update things
-  * DELETE => remove things
+  * __GET__ &rarr; fetch things
+  * __POST__ &rarr; create things
+  * __PUT__ &rarr; update things
+  * __DELETE__ &rarr; remove things
 
 * Common (but optional) parameters:
   * __url__ -- all video-adding methods (share, queue, like, etc.) accept either an __?id__ parameter or a __?url__ paramter. This lets you easily specify a native VHX video ID or an arbitrary YouTube or Vimeo URL
@@ -65,7 +65,7 @@ We plan to add full OAuth2 support soon.
 
 ### [App Registration](#app_registration)
 
-We don't currently require you to formally register your app, but request that you identify your __app_id__ parameter with your requests will raise your rate limits (and make sure we don't ban you).
+We don't currently require you to formally register your app, but request that you pass an identifying string as an __app_id__ parameter, especially if you are on a shared IP (e.g. a hackathon). In the future this will grant you increased rate limits as well.
 
     curl http://api.vhx.tv/jamiew.json?app_id=testbed_app
 
@@ -96,6 +96,11 @@ Share that same video, with a simple urlencoded comment. First video posted on V
         -d api_token=SECRET \
         -d comment=First+video+posted+on+Vimeo \
         http://api.vhx.tv/videos/share.json
+
+More code samples:
+
+* [Simple megaplaya + jQuery demo app](https://gist.github.com/1215779)
+* [NONSTOPTV app](http://github.com/jamiew/nonstoptv) -- a styled Megaplaya fed by YouTube searches, as seen on [showmenonstop.com](http://showmenonstop.com)
 
 
 ## [API Methods](#api_methods)
@@ -134,6 +139,17 @@ _public_
 (everything except 'watched')
 
 ### [Playlists](#playlists)
+
+A video mixtape, composed of a list of videos with "position" attributes. The basic operations to create a playlist are:
+
+* POST /playlists with title and optional description and image -- store the returned __id__ (e.g. 123) and __slug__ (url chunk parsed from title, e.g. "my-new-playlist")
+* POST video URLs to /playlists/123 -- store the returned ids for these as well, since you can use them to delete or move the videos later
+* PUT /playlists/123/videos/456789/move -- with a 'position' parameter
+* DELETE /playlists/123/videos/456789 -- to remove it completely
+
+The playlist is visible on vhx.tv at http://vhx.tv/[USERNAME]/[PLAYLIST_SLUG]
+
+http://vhx.tv/playlists/123 is still a valid API resource endpoint, and if you visit it on the live site it will 301 Redirect to semantic URL.
 
 Yes, we support [animated GIFs](http://vhx.tv/casey/robocop)!
 
