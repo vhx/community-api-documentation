@@ -3,7 +3,7 @@ layout: default
 title:
 ---
 
-## [Greetings, programs]
+## [Greetings, programs]()
 
 <div style="text-align:center;margin-bottom: 40px;">
   <img align="center" src="http://vhx.tv/images/spacecat-cropped.png" alt="Spacecat" title="Spacecat" style="text-align:center;height: 100px; padding-right: 12px; " />
@@ -33,7 +33,7 @@ For some demos of what you can do with the VHX embeddable player and API visit [
 * Follow us on Twitter: [@vhxtv](http://twitter.com/vhxtv)
 * Follow our Tumblr: [blog.vhx.tv](http://blog.vhx.tv)
 
-## [Let's get started]
+## [Let's get started]()
 
 ### [Demo apps and code samples](#demo_apps_and_code_samples)
 
@@ -174,7 +174,7 @@ The rough order of operations to create a playlist are:
 * PUT /playlists/123/videos/456789/move -- with a 'position' parameter
 * DELETE /playlists/123/videos/456789 -- to remove it completely
 
-The playlist is visible on vhx.tv at http://vhx.tv/[USERNAME]/[PLAYLIST_SLUG]
+The playlist is visible on vhx.tv at http://vhx.tv/{USERNAME}/{PLAYLIST_SLUG}
 
 http://vhx.tv/playlists/123 is still a valid API resource endpoint, and if you visit it on the live site it will 301 Redirect to semantic URL.
 
