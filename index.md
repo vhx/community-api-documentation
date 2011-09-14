@@ -25,6 +25,7 @@ title:
 
 The VHX API and this documentation are currently in _BETA_. Please contact us [via email](mailto:dev@vhx.tv) or through our [contact form](http://vhx.tv/feedback) with any issues or suggestions. OAuth2 support coming soon.
 
+For some demos of what you can do with the VHX embeddable player and API visit [Music Video Genome](http://musicvideogenome.com) or [showmenonstop.com](http://showmenonstop.com)
 <br />
 
 * Join the [VHXdev mailing list](https://groups.google.com/group/vhx-api) for announcements and general discussion.
@@ -33,6 +34,40 @@ The VHX API and this documentation are currently in _BETA_. Please contact us [v
 * Follow our Tumblr: [blog.vhx.tv](http://blog.vhx.tv)
 
 ## [Let's get started]
+
+### [Demo apps and code samples](#demo_apps_and_code_samples)
+
+* [Complete megaplaya + jQuery demo](https://gist.github.com/1215779) -- use our embedable player to play videos from any site. Read more on the [video-player](/video-player.html) page
+* [showmemenonstop.com source code](http://github.com/jamiew/nonstoptv) -- a custom-styled Megaplaya fed by YouTube searches
+
+
+### [Just show me the 'curl' examples](#just_show_me_the_curl_examples)
+
+Get all the videos shared by [@staff](http://vhx.tv/staff/shared):
+
+    curl http://api.vhx.tv/staff/shared.json
+
+
+Get queued videos for the current user, authenticating as __@jamiew__:
+
+    curl http://api.vhx.tv/queue.json?login=jamiew&api_token=[SECRET]
+
+
+Add <http://vimeo.com/123456> to my queue, authenticating as __@jamiew__:
+
+    curl -d url=http://vimeo.com/123456 \
+      -d login=jamiew \
+      -d api_token=[SECRET] \
+      http://api.vhx.tv/videos/queue.json
+
+Share that same video, with a simple urlencoded comment. First video posted on Vimeo!:
+
+    curl -d url=http://vimeo.com/2 \
+        -d login=jamiew \
+        -d api_token=SECRET \
+        -d comment=First+video+posted+on+Vimeo \
+        http://api.vhx.tv/videos/share.json
+
 
 ### [General API info](#general_api_info)
 
@@ -68,39 +103,6 @@ We plan to add full OAuth2 support soon.
 We don't currently require you to formally register your app, but request that you pass an identifying string as an __app_id__ parameter, especially if you are on a shared IP (e.g. a hackathon). In the future this will grant you increased rate limits as well.
 
     curl http://api.vhx.tv/jamiew.json?app_id=testbed_app
-
-
-### [Just show me the 'curl' examples](#just_show_me_the_curl_examples)
-
-Get all the videos shared by [@staff](http://vhx.tv/staff/shared):
-
-    curl http://api.vhx.tv/staff/shared.json
-
-
-Get queued videos for the current user, authenticating as __@jamiew__:
-
-    curl http://api.vhx.tv/queue.json?login=jamiew&api_token=[SECRET]
-
-
-Add <http://vimeo.com/123456> to my queue, authenticating as __@jamiew__:
-
-    curl -d url=http://vimeo.com/123456 \
-      -d login=jamiew \
-      -d api_token=[SECRET] \
-      http://api.vhx.tv/videos/queue.json
-
-Share that same video, with a simple urlencoded comment. First video posted on Vimeo!:
-
-    curl -d url=http://vimeo.com/2 \
-        -d login=jamiew \
-        -d api_token=SECRET \
-        -d comment=First+video+posted+on+Vimeo \
-        http://api.vhx.tv/videos/share.json
-
-More code samples:
-
-* [Simple megaplaya + jQuery demo app](https://gist.github.com/1215779)
-* [NONSTOPTV app](http://github.com/jamiew/nonstoptv) -- a styled Megaplaya fed by YouTube searches, as seen on [showmenonstop.com](http://showmenonstop.com)
 
 
 ## [API Methods](#api_methods)
