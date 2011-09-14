@@ -6,17 +6,15 @@ title: Megaplaya -
 ## Megaplaya
 
 <script type="text/javascript">
-  $(document).ready(
-    function() {
-      $('#vhx_megaplaya').flash({
-        swf: 'http://vhx.tv/embed/megaplaya',
-        width: 450,
-        allowFullScreen: true,
-        allowScriptAccess: "always",
-        height: 337
-      });
-    }
-  );
+  $(document).ready(function(){
+    $('#vhx_megaplaya').flash({
+      swf: 'http://vhx.tv/embed/megaplaya',
+      width: 450,
+      allowFullScreen: true,
+      allowScriptAccess: "always",
+      height: 337
+    });
+  });
 
   // Megaplaya calls this function when it's ready
   var megaplaya = false;
@@ -54,8 +52,7 @@ The below example loads all our VHX fan-made bumper videos from [vimeo.com/vhx/v
 
 <div id="player_demo_code">
 <pre>
-$(document).ready(
-  function() {
+$(document).ready(function(){
     $('#vhx_megaplaya').flash({
       swf: 'http://vhx.tv/embed/megaplaya',
       width: 450,
@@ -68,14 +65,12 @@ $(document).ready(
 
 // Megaplaya calls this function when it's ready
 var megaplaya = false;
-function megaplaya_loaded()
-{
+function megaplaya_loaded() {
   megaplaya = $('#vhx_megaplaya').children()[0];
 }
 
 // Load videos from Vimeo using JSONp callback
-function load_videos()
-{
+function load_videos() {
   $.ajax({
     type: "GET",
     url: $('#vimeo_videos_url')[0].value,
@@ -85,7 +80,7 @@ function load_videos()
         megaplaya.api_playQueue(videos);
       }
     }
-   });
+  });
 }
 </pre>
 </div>
