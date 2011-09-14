@@ -37,8 +37,8 @@ For some demos of what you can do with the VHX embeddable player and API visit [
 
 ### [Demo apps and code samples](#demo_apps_and_code_samples)
 
-* [Complete megaplaya + jQuery demo](https://gist.github.com/1215779) -- use our embedable player to play videos from any site. Read more on the [video-player](/video-player.html) page
-* [showmemenonstop.com source code](http://github.com/jamiew/nonstoptv) -- a custom-styled Megaplaya fed by YouTube searches
+* [Megaplaya + jQuery demo](https://gist.github.com/1215779) (HTML/JS/CSS) -- use the VHX player to play videos from any site. [More info here](/video-player.html)
+* [showmemenonstop.com](http://github.com/jamiew/nonstoptv) (HTML/JS/CSS) -- a custom-styled player fed by YouTube searches
 
 
 ### [Just show me the 'curl' examples](#just_show_me_the_curl_examples)
