@@ -48,7 +48,7 @@ Get all the videos shared by [@staff](http://vhx.tv/staff/shared):
     curl http://api.vhx.tv/staff/shared.json
 
 
-Get queued videos for the current user, authenticating as __@jamiew__:
+Get queued videos for the current user, authenticating as __@jamiew__ -- api_token is available at [vhx.tv/settings](http://vhx.tv/settings)
 
     curl http://api.vhx.tv/queue.json?login=jamiew&api_token=[SECRET]
 
