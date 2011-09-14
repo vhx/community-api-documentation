@@ -94,10 +94,10 @@ function load_videos()
 
 ### [Player setup using jQuery](#setup)
 
-For this demo, we're using jQuery, but you can use whatever you want. SWFObject is used for .flash()
+For this demo, we're using jQuery, but you can use whatever you want. jquery.swfobject is used for .flash() but you could inject it manually as well
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://vhx.tv/javascripts/jquery.swfobject-1.1.1.js"></script>
 
 This is the Megaplaya SWF URL:
 
