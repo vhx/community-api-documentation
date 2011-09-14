@@ -8,7 +8,7 @@ title: Megaplaya -
 <script type="text/javascript">
   $(document).ready(function(){
     $('#vhx_megaplaya').flash({
-      swf: 'http://vhx.tv/embed/megaplaya',
+      swf: 'http://localhost:3000/embed/megaplaya',
       width: 450,
       allowFullScreen: true,
       allowScriptAccess: "always",
@@ -61,7 +61,7 @@ The below demo loads all the videos from [vimeo.com/vhx](http://vimeo.com/vhx) i
 <pre>
 $(document).ready(function(){
     $('#vhx_megaplaya').flash({
-      swf: 'http://vhx.tv/embed/megaplaya',
+      swf: 'http://vhx.tv/swf/megaplaya.swf',
       width: 450,
       allowFullScreen: true,
       allowScriptAccess: "always",
@@ -100,6 +100,30 @@ function load_videos() {
 
 * [NONSTOPTV app](http://github.com/jamiew/nonstoptv) -- a styled Megaplaya fed by YouTube searches
 
+
+### [Three ways to embed Megaplaya](#flavors)
+
+We have many variations of embedding Megaplaya that should suit all your needs.
+
+<table>
+  <tr>
+    <td class="head">Simple</td>
+    <td>Specify a list of video URLs</td>
+    <td class="code">http://vhx.tv/embed/megaplaya?videos=http://vimeo.com/25584378,http://www.youtube.com/watch?v=btV6M2xDe38</td>
+  </tr>
+  <tr>
+    <td class="head">Smart</td>
+    <td>Specify a VHX URL to pull videos from. The embed will always play the latest videos in that channel, e.g. <b>/casey/shared</b></td>
+    <td class="code">http://vhx.tv/embed/megaplaya?url=/casey/shared</td>
+  </tr>
+  <tr>
+    <td class="head">Advanced</td>
+    <td>Total control via Javascript allowing player customization and response to events.<br /><a href="/advanced-embed.html">Click here to see a demo</a></td>
+    <td class="code" style="background: url('http://sht.tl/i2OD') 0 -38px;">&nbsp;</td>
+  </tr>
+</table>
+
+
 ### [Player setup using jQuery](#setup)
 
 For this demo we're using jQuery, but you can use whatever you want. [jquery.swfobject](http://jquery.thewikies.com/swfobject/) is used for injecting the SWF in a cross-browser, standards-compliant manner, but you could use vanilla [SWFObject](http://code.google.com/p/swfobject/) as well.
@@ -109,7 +133,7 @@ For this demo we're using jQuery, but you can use whatever you want. [jquery.swf
 
 This is the Megaplaya SWF URL:
 
-    http://vhx.tv/embed/megaplaya
+    http://vhx.tv/swf/megaplaya.swf
 
 Now add a #vhx_megaplaya div and inject the SWF into your page. This example uses [jquery-swfobject](http://jquery.thewikies.com/swfobject/) to inject the SWF:
 
@@ -118,7 +142,7 @@ Now add a #vhx_megaplaya div and inject the SWF into your page. This example use
     <script>
       $(document).ready(function(){
         $('#vhx_megaplaya').flash({
-          swf: 'http://vhx.tv/embed/megaplaya',
+          swf: 'http://vhx.tv/swf/megaplaya.swf',
           width: 500,
           height: 375
           allowFullScreen: true,
@@ -236,14 +260,14 @@ __Can I update the queue without restarting it?__
 Yes you can. We have no built-in methods for this, but you can simply do something like this:
 
     // load some videos in
-    player.api_playQueue(myvideos);
+    megaplaya.api_playQueue(myvideos);
 
     // Load in a new set of videos. Note that megaplaya will continue playing the current video
-    player.api_updateQueue(mynewvideos);
+    megaplaya.api_updateQueue(mynewvideos);
 
     // Just make sure when you update the queue, you update the position of the current playing video
     // so megaplaya knows where it should be playing in the queue
-    player.api_setQueueAt(index);
+    megaplaya.api_setQueueAt(index);
 
 __What video services do you support?__
 

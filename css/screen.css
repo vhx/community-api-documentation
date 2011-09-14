@@ -99,7 +99,7 @@ background-position: 100% 100%
       margin: 0 0 0 20px;
   }
   #nav li a {
-    font: bold 14px Helvetica, Arial !important;
+    font: normal 14px Helvetica, Arial !important;
     color: #fff;
   }
   #nav li a:hover {
@@ -368,3 +368,13 @@ pre ::-webkit-scrollbar-thumb {
   background-color: rgba(0,0,0,.5);
   -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
 }
+
+#controls .btn { float: left; margin: 10px 10px 20px 0; }
+#megaplaya_log { overflow: scroll; width: 500px; height: 200px; margin: 10px; padding: 10px; background: #ddd; font-family: monospace;
+font-size: 10pt;
+line-height: 1.4em; }
+
+table  { background: #fff; margin: 20px;  }
+table tr td { padding: 10px; }
+table tr td.head { font-weight: bold; }
+table tr td.code { font: normal 14px "Courier New", Arial; color: #333; }
