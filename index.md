@@ -140,18 +140,7 @@ _public_
 
 ### [Playlists](#playlists)
 
-A video mixtape, composed of a list of videos with "position" attributes. The basic operations to create a playlist are:
-
-* POST /playlists with title and optional description and image -- store the returned __id__ (e.g. 123) and __slug__ (url chunk parsed from title, e.g. "my-new-playlist")
-* POST video URLs to /playlists/123 -- store the returned ids for these as well, since you can use them to delete or move the videos later
-* PUT /playlists/123/videos/456789/move -- with a 'position' parameter
-* DELETE /playlists/123/videos/456789 -- to remove it completely
-
-The playlist is visible on vhx.tv at http://vhx.tv/[USERNAME]/[PLAYLIST_SLUG]
-
-http://vhx.tv/playlists/123 is still a valid API resource endpoint, and if you visit it on the live site it will 301 Redirect to semantic URL.
-
-Yes, we support [animated GIFs](http://vhx.tv/casey/robocop)!
+A video mixtape, composed of a list of videos with "position" attributes. Yes, we support [animated GIFs](http://vhx.tv/casey/robocop)!
 
 _public_
 
@@ -171,6 +160,21 @@ _auth required_
     GET http://api.vhx.tv/playlists/mine.json             -- authenticating user's playlists
     GET http://api.vhx.tv/videos/:id/playlists.json       -- playlists said video is present in
     GET http://api.vhx.tv/videos/:id/playlists/mine.json  -- playlists by the authenticating user's that said video is in
+
+### [Basic playlist API example](#basic_playlist_api_example)
+
+The rough order of operations to create a playlist are:
+
+* POST /playlists -- with title and optional description and image
+  * store the returned __id__ (e.g. 123) and __slug__ (url chunk parsed from title, e.g. "my-new-playlist")
+* POST video URLs to /playlists/123
+  * store the returned ids for these as well, since you can use them to delete or move the videos later
+* PUT /playlists/123/videos/456789/move -- with a 'position' parameter
+* DELETE /playlists/123/videos/456789 -- to remove it completely
+
+The playlist is visible on vhx.tv at http://vhx.tv/[USERNAME]/[PLAYLIST_SLUG]
+
+http://vhx.tv/playlists/123 is still a valid API resource endpoint, and if you visit it on the live site it will 301 Redirect to semantic URL.
 
 
 ### [User info & Followers](#user_info_followers)
