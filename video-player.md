@@ -108,17 +108,15 @@ Now add a #vhx_megaplaya div and inject the SWF into your page.
     <div id="vhx_megaplaya"></div>
 
     <script>
-      $(document).ready(
-        function() {
-          $('#vhx_megaplaya').flash({
-            swf: 'http://vhx.tv/embed/megaplaya',
-            width: 500,
-            height: 375
-            allowFullScreen: true,
-            allowScriptAccess: "always",
-          });
-        }
-      );
+      $(document).ready(function(){
+        $('#vhx_megaplaya').flash({
+          swf: 'http://vhx.tv/embed/megaplaya',
+          width: 500,
+          height: 375
+          allowFullScreen: true,
+          allowScriptAccess: "always",
+        });
+      });
     </script>
 
 ### [Megaplaya loaded](#megaplaya-loaded)
@@ -129,7 +127,7 @@ Megaplaya automatically calls **megaplaya_loaded()** when it's ready. You may al
     function megaplaya_loaded()
     {
       // You need save the reference to the newly created SWF object
-      megaplaya = $('#megaplaya').children()[0];
+      megaplaya = $('#vhx_megaplaya').children()[0];
     }
 
 ### [Let's play some videos](#example)
