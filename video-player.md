@@ -8,7 +8,7 @@ title: Megaplaya -
 <script type="text/javascript">
   $(document).ready(function(){
     $('#vhx_megaplaya').flash({
-      swf: 'http://localhost:3000/embed/megaplaya',
+      swf: 'http://vhx.tv/embed/megaplaya',
       width: 450,
       allowFullScreen: true,
       allowScriptAccess: "always",
@@ -97,6 +97,8 @@ function load_videos() {
 ### [Sample code](#sample_code)
 
 * [Simple megaplaya + jQuery demo app](https://gist.github.com/1215779)
+
+* [Advanced megaplaya demo](/advanced-embed.html)
 
 * [NONSTOPTV app](http://github.com/jamiew/nonstoptv) -- a styled Megaplaya fed by YouTube searches
 
