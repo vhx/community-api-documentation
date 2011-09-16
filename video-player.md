@@ -233,9 +233,9 @@ Below is the list of available JS api hooks. Please don't hesitate to [contact u
 
     api_setVolume(val:Number):void // Value between 0 and 1
 
-    api_toggle():void     // toggle pause/play
+    api_toggleVideo():void     // toggle pause/play
     api_playVideo():void  // play the video
-    api_pause():void      // pause the video
+    api_pauseVideo():void      // pause the video
 
     // Not gauranteed to work in all browsers. Usually requires SWF object focus first
     api_goFullscreen():void
@@ -243,8 +243,8 @@ Below is the list of available JS api hooks. Please don't hesitate to [contact u
 
     api_seek(position:Number):void    // Value between 0 and 1
 
-    api_disable():void  // hides VHX's player controls
-    api_enable():void   // shows VHX's player controls
+    api_disablePlaybar():void  // hides VHX's player controls
+    api_enablePlaybar():void   // shows VHX's player controls
 
     api_zoomify():void    // FX: Zooms into the video. Same as VHX.tv splash page background
     api_unzoomify():void  // FX: Zooms back out
@@ -253,8 +253,9 @@ Below is the list of available JS api hooks. Please don't hesitate to [contact u
     api_visitVideoLink():void
     api_copyEmbedCode():void  // Requres embed paramter to be passed along with video.
 
-    api_getCurPlayingVideo():Object  // Returns current playing video boject
-    api_getCurrentTime():Number      // Current time in seconds
+    api_getCurrentVideo():Object        // Returns current playing video object
+    api_getCurrentVideoIndex():Number   // Returns current playing video's position in the queue
+    api_getCurrentTime():Number         // Current time in seconds
 
 ## [FAQ](#faq)
 
@@ -293,3 +294,4 @@ We're working on adding every type of thing you need. Here's what's on our immed
 * Methods
   * getBytesLoaded
   * getBytesTotal
+  * stopVideo
