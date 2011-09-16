@@ -96,9 +96,11 @@ function load_videos() {
 
 ### [Sample code](#sample_code)
 
-* [Simple megaplaya + jQuery demo app](https://gist.github.com/1215779)
+* [Simple embed (HTML demo)](/simple-embed.html)
 
-* [Advanced megaplaya demo](/advanced-embed.html)
+* [Simple embed (Javsacript demo)](https://gist.github.com/1215779)
+
+* [Advanced embed demo](/advanced-embed.html)
 
 * [NONSTOPTV app](http://github.com/jamiew/nonstoptv) -- a styled Megaplaya fed by YouTube searches
 
@@ -110,7 +112,7 @@ We have many variations of embedding Megaplaya that should suit all your needs.
 <table>
   <tr>
     <td class="head">Simple</td>
-    <td>Specify a list of video URLs</td>
+    <td>Specify a list of video URLs<br /><a href="/simple-embed.html">Click here to see a demo</a></td>
     <td class="code">http://vhx.tv/embed/megaplaya?videos=http://vimeo.com/25584378,http://www.youtube.com/watch?v=btV6M2xDe38</td>
   </tr>
   <tr>
@@ -214,7 +216,6 @@ Below is the list of available JS api hooks. Please don't hesitate to [contact u
       onError
       onPause
       onPlay
-      onFullscreen
       onPlaybarShow   // triggers when the VHX playbar shows itself
       onPlaybarHide   // triggers when the VHX playbar hides itself
 
@@ -278,3 +279,17 @@ __What video services do you support?__
 * Raw video files (h264 and FLV)
 
 Support for more sites coming soon.
+
+<br />
+__Megaplaya is missing events and/or methods I need__
+
+We're working on adding every type of thing you need. Here's what's on our immediate to-do list. Please contact us if you need something immediately!
+
+* Events
+  * onFullscreen
+  * onExitFullscreen
+  * onVideoLoadComplete
+
+* Methods
+  * getBytesLoaded
+  * getBytesTotal
