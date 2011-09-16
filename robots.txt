@@ -1,0 +1,2 @@
+# GREETINGS PROGRAMS
+Sitemap: http://dev.vhx.tv/sitemap.xml
