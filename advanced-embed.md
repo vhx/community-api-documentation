@@ -75,11 +75,11 @@ title: Megaplaya Advanced Embed -
 <div id="vhx_megaplaya">Loading...</div>
 <div id="controls">
   <input class="btn" onclick="megaplaya_call('playVideo')" value="Play" />
-  <input class="btn" onclick="megaplaya_call('pause')" value="Pause" />
+  <input class="btn" onclick="megaplaya_call('pauseVideo')" value="Pause" />
   <input class="btn" onclick="megaplaya_call('prevVideo')" value="Prev video" />
   <input class="btn" onclick="megaplaya_call('nextVideo')" value="Next video" />
-  <input class="btn" onclick="megaplaya_call('disable')" value="Disable playbar" />
-  <input class="btn" onclick="megaplaya_call('enable')" value="Enable playbar" />
+  <input class="btn" onclick="megaplaya_call('disablePlaybar')" value="Disable playbar" />
+  <input class="btn" onclick="megaplaya_call('enablePlaybar')" value="Enable playbar" />
   <input class="btn" onclick="megaplaya_call('zoomify')" value="Zoom-in" />
   <input class="btn" onclick="megaplaya_call('unzoomify')" value="Zoom-out" />
 </div>
