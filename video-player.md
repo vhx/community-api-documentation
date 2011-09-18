@@ -61,7 +61,7 @@ The below demo loads all the videos from [vimeo.com/vhx](http://vimeo.com/vhx) i
 <pre>
 $(document).ready(function(){
     $('#vhx_megaplaya').flash({
-      swf: 'http://vhx.tv/swf/megaplaya.swf',
+      swf: 'http://vhx.tv/embed/megaplaya',
       width: 450,
       allowFullScreen: true,
       allowScriptAccess: "always",
@@ -137,7 +137,7 @@ For this demo we're using jQuery, but you can use whatever you want. [jquery.swf
 
 This is the Megaplaya SWF URL:
 
-    http://vhx.tv/swf/megaplaya.swf
+    http://vhx.tv/embed/megaplaya
 
 Now add a #vhx_megaplaya div and inject the SWF into your page. This example uses [jquery-swfobject](http://jquery.thewikies.com/swfobject/) to inject the SWF:
 
@@ -146,7 +146,7 @@ Now add a #vhx_megaplaya div and inject the SWF into your page. This example use
     <script>
       $(document).ready(function(){
         $('#vhx_megaplaya').flash({
-          swf: 'http://vhx.tv/swf/megaplaya.swf',
+          swf: 'http://vhx.tv/embed/megaplaya',
           width: 500,
           height: 375
           allowFullScreen: true,
