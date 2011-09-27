@@ -41,7 +41,7 @@ title: Megaplaya -
   }
 </script>
 
-Welcome to <b markdown="1">Megaplaya</b>, VHX's video player. You can load in a list of YouTube, Vimeo and raw video URLs using simple Javascript calls. You can even hide the VHX UI and create your own JS controls.
+Welcome to <b markdown="1">Megaplaya</b>, VHX's video player. You can load in a list of YouTube, Vimeo and raw video URLs using simple embed code or with Javascript. You can even hide the VHX UI and create your own JS controls.
 
 To see demos of Megaplaya in the wild, visit [showmenonstop.com](http://showmenonstop.com), [musicvideogenome.com](http://musicvideogenome.com) or jump to all the [sample code](#sample_code) and [featured apps](/featured-apps.html)
 
@@ -96,6 +96,8 @@ function load_videos() {
 
 ### [Sample code](#sample_code)
 
+* [Universal embed (iframe & mobile support)](/iframe-embed.html)
+
 * [Simple embed (HTML demo)](/simple-embed.html)
 
 * [Simple embed (Javsacript demo)](https://gist.github.com/1215779)
@@ -113,12 +115,12 @@ We have many variations of embedding Megaplaya that should suit all your needs.
   <tr>
     <td class="head">Simple</td>
     <td>Specify a list of video URLs<br /><a href="/simple-embed.html">Click here to see a demo</a></td>
-    <td class="code">http://vhx.tv/embed/megaplaya?videos=http://vimeo.com/25584378,http://www.youtube.com/watch?v=btV6M2xDe38</td>
+    <td class="code">http://vhx.tv/embed/megaplaya.swf?videos=http://vimeo.com/25584378,http://www.youtube.com/watch?v=btV6M2xDe38</td>
   </tr>
   <tr>
     <td class="head">Smart</td>
-    <td>Specify a VHX URL to pull videos from. The embed will always play the latest videos in that channel, e.g. <b>/casey/shared</b></td>
-    <td class="code">http://vhx.tv/embed/megaplaya?url=/casey/shared</td>
+    <td>Specify a VHX URL to pull videos from. The embed will always play the latest videos in that channel, e.g. <b>/casey/shared</b><br /><a href="/iframe-embed.html">Click here to see a demo</a></td>
+    <td class="code">http://vhx.tv/embed/megaplaya.swf?url=/casey/shared</td>
   </tr>
   <tr>
     <td class="head">Advanced</td>
@@ -127,6 +129,15 @@ We have many variations of embedding Megaplaya that should suit all your needs.
   </tr>
 </table>
 
+### [iframes vs objects](#iframe)
+
+Please note that if you want the embed to work on mobile platforms you should use the [iframe embed](/iframe-embed.html). Iframes require the below url:
+
+    http://vhx.tv/embed/megaplaya.html
+
+Embedding with javascript control requires the below url:
+
+    http://vhx.tv/embed/megaplaya.swf
 
 ### [Player setup using jQuery](#setup)
 
