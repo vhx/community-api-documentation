@@ -31,6 +31,14 @@ Our OEmbed endpoint will intelligently determine if the passed ?url param is a v
 
 Per the oembed spec the **type** field will always be "video". If you want to tell a video from playlist you can check for "video_id" vs "playlist_id" field.
 
+### [Embed options](#embed_options)
+
+You can specify a few parameters to customize the returned embed:
+
+* **autoplay:** 1 or 0
+* **width:** in pixels
+* **height:** in pixels
+
 
 ### [JSONp callbacks](#jsonp_callbacks)
 
