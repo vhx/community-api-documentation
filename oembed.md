@@ -7,7 +7,7 @@ title: OEmbed endpoint -
 
 VHX provides a [OEmbed](http://oembed.com/) support to let you easily fetch video or playlist information, e.g.:
 
-[http://vhx.tv/services/oembed?url=http://vhx.tv/jamiew/shared/394462](http://vhx.tv/services/oembed?url=http://vhx.tv/jamiew/shared/394462)
+[http://vhx.tv/services/oembed.json?url=http://vhx.tv/jamiew/shared/394462](http://vhx.tv/services/oembed.json?url=http://vhx.tv/jamiew/shared/394462)
 
 ### [Overview](#overview)
 
