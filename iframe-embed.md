@@ -5,11 +5,8 @@ title: Universal Embed -
 
 ## Universal Embed
 
-Use this iframe embed and it will work on almost all platforms. (Currently all browsers, iPhone, iPad, iPod and Android). Please note that there is no support for Javascript control over an iframe, yet.
+Use th megaplaya iframe embed and it will work on almost all platforms. Currently: all browsers, iPhone, iPad, iPod and Android. Please note that there is no support for Javascript control over an iframe, yet.
 
-Iframes use the below URL:
-
-    http://vhx.tv/embed/megaplaya.html
 
 <div id="inject">
 
@@ -17,7 +14,7 @@ Iframes use the below URL:
 </div>
 
 
-This player pulls videos from Staff's shared videos.
+This player URL pulls videos from Staff's shared videos:
 
     http://vhx.tv/embed/megaplaya.html?url=/staff/shared
 
