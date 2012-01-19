@@ -96,15 +96,17 @@ function load_videos() {
 
 ### [Sample code](#sample_code)
 
-* [Universal embed (iframe & mobile support)](/iframe-embed.html)
+* [Universal embed (iframe with mobile device support)](/iframe-embed.html)
+
+* [Advanced embed demo](/advanced-embed.html): megaplaya event callbacks, player customization, etc.
 
 * [Simple embed (HTML demo)](/simple-embed.html)
 
-* [Simple embed (Javsacript demo)](https://gist.github.com/1215779)
+### Example Applications
 
-* [Advanced embed demo](/advanced-embed.html)
-
-* [NONSTOPTV app](http://github.com/jamiew/nonstoptv) -- a styled Megaplaya fed by YouTube searches
+* [showmenonstop.com](http://github.com/jamiew/nonstoptv) -- a styled Megaplaya fed by YouTube searches
+* [VHX tumblr theme](https://github.com/caseypugh/VHX-Theme)
+* [urbandictionary.tv](https://github.com/apeckham/urbantv)
 
 
 ### [Three ways to embed Megaplaya](#flavors)
