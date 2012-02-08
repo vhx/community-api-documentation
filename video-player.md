@@ -232,14 +232,18 @@ Below is the list of available JS api hooks. Please don't hesitate to [contact u
       onPlaybarShow   // triggers when the VHX playbar shows itself
       onPlaybarHide   // triggers when the VHX playbar hides itself
 
-    api_growl():void  // A simple growl message that appears at the top of the player
-    api_warn():void   // same as above, but in red
+    api_growl(msg:String):void  // A simple growl message that appears at the top of the player
+    api_warn(msg:String):void   // same as above, but in red
+
+    api_setColor(color:String):void // Change the primary color of Megaplaya (e.g. ff0000)
 
     api_loadQueue(videos:Array):void // Clears out current queue, and loads the next. Doesn't play.
     api_setQueueAt(index:int):void   // Updates the player's reference point in the queue. Doesn't play.
 
     api_playQueue(videos:Array):void // Clears out current queue, and loads the next. Autoplays.
     api_playQueueAt(index:int):void  // Updates the player's reference point in the queue. Autoplays.
+
+    api_getQueue():Array // Return the current queue of videos
 
     api_nextVideo():void
     api_prevVideo():void
@@ -261,6 +265,7 @@ Below is the list of available JS api hooks. Please don't hesitate to [contact u
 
     api_zoomify():void    // FX: Zooms into the video. Same as VHX.tv splash page background
     api_unzoomify():void  // FX: Zooms back out
+    api_disableLetterbox(width:int, height:int):void // FX: Removes black bars from the video completely (Warning: This only works if you know the dimensions or aspect ratio of the current playing video)
 
     api_copyVideoLink():void
     api_visitVideoLink():void
