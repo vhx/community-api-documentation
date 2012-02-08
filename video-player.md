@@ -280,7 +280,7 @@ Yes you can. We have no built-in methods for this, but you can simply do somethi
     megaplaya.api_playQueue(myvideos);
 
     // Load in a new set of videos. Note that megaplaya will continue playing the current video
-    megaplaya.api_updateQueue(mynewvideos);
+    megaplaya.api_loadQueue(mynewvideos);
 
     // Just make sure when you update the queue, you update the position of the current playing video
     // so megaplaya knows where it should be playing in the queue
