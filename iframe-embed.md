@@ -5,7 +5,7 @@ title: Universal Embed -
 
 ## Universal Embed
 
-Use th megaplaya iframe embed and it will work on almost all platforms. Currently: all browsers, iPhone, iPad, iPod and Android. Please note that there is no support for Javascript control over an iframe, yet.
+Use the megaplaya iframe embed and it will work on almost all platforms. Currently: all browsers, iPhone, iPad, iPod and Android. Please note that there is no support for Javascript control over an iframe, yet.
 
 
 <div id="inject">

@@ -161,9 +161,9 @@ Now add a #vhx_megaplaya div and inject the SWF into your page. This example use
         $('#vhx_megaplaya').flash({
           swf: 'http://vhx.tv/embed/megaplaya',
           width: 500,
-          height: 375
+          height: 375,
           allowFullScreen: true,
-          allowScriptAccess: "always",
+          allowScriptAccess: "always"
         });
       });
     </script>
