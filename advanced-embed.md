@@ -10,7 +10,7 @@ title: Megaplaya Advanced Embed -
   $(document).ready(
     function() {
       $('#vhx_megaplaya').flash({
-        swf: 'http://vhx.tv/embed/megaplaya.swf',
+        swf: 'http://community.vhx.tv/embed/megaplaya.swf',
         width: 850,
         allowFullScreen: true,
         allowScriptAccess: "always",

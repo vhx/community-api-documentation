@@ -6,7 +6,7 @@ title:
 ## [Greetings, programs]()
 
 <div style="text-align:center;margin-bottom: 40px;">
-  <img align="center" src="http://vhx.tv/images/spacecat-cropped.png" alt="Spacecat" title="Spacecat" style="text-align:center;height: 100px; padding-right: 12px; " />
+  <img align="center" src="http://community.vhx.tv/images/spacecat-cropped.png" alt="Spacecat" title="Spacecat" style="text-align:center;height: 100px; padding-right: 12px; " />
 </div>
 
 <div class="col" markdown="1" style="background: #1a1a1a url('http://sht.tl/ynSeC') 10px 135px no-repeat;" onclick="location.href='#general_api_info'">
@@ -15,7 +15,7 @@ title:
 </div>
 <div class="col col2" markdown="1" style="background: #1a1a1a url('http://sht.tl/aCSEr') -20px 0 no-repeat;" onclick="location.href='#playlists'">
   <div class="title">2) Make Playlists</div>
-  Organize videos into fun, continous-play video mixtapes, with support for animated GIF album art. [Here's an example](http://vhx.tv/casey/music-videos)
+  Organize videos into fun, continous-play video mixtapes, with support for animated GIF album art. [Here's an example](http://community.vhx.tv/casey/music-videos)
 </div>
 <div class="col col3" markdown="1" style="background: #1a1a1a url('http://sht.tl/9VgT') -120px -40px no-repeat;" onclick="location.href='/video-player.html'">
   <div class="title">3) Embeddable Player</div>
@@ -23,7 +23,7 @@ title:
 </div>
 <div class="clear">&nbsp;</div>
 
-The VHX API and this documentation are currently in _BETA_. Please contact us [via email](mailto:dev@vhx.tv) or through our [contact form](http://vhx.tv/feedback) with any issues or suggestions. OAuth2 support coming soon.
+The VHX API and this documentation are currently in _BETA_. Please contact us [via email](mailto:dev@vhx.tv) or through our [contact form](http://community.vhx.tv/feedback) with any issues or suggestions. OAuth2 support coming soon.
 
 For some demos of what you can do with the VHX embeddable player and API visit [Music Video Genome](http://musicvideogenome.com) or [showmenonstop.com](http://showmenonstop.com)
 <br />
@@ -43,12 +43,12 @@ For some demos of what you can do with the VHX embeddable player and API visit [
 
 ### [Just show me the 'curl' examples](#just_show_me_the_curl_examples)
 
-Get all the videos shared by [@staff](http://vhx.tv/staff/shared):
+Get all the videos shared by [@staff](http://community.vhx.tv/staff/shared):
 
     curl http://api.vhx.tv/staff/shared.json
 
 
-Get queued videos for the current user, authenticating as __@jamiew__ -- api_token is available at [vhx.tv/settings](http://vhx.tv/settings)
+Get queued videos for the current user, authenticating as __@jamiew__ -- api_token is available at [vhx.tv/settings](http://community.vhx.tv/settings)
 
     curl http://api.vhx.tv/queue.json?login=jamiew&api_token=[SECRET]
 
@@ -86,7 +86,7 @@ Share that same video, with a simple urlencoded comment. First video posted on V
 
 * Authentication parameters:
   * __login__ -- authenticating user's username (jamiew) or email address (jamie@vhx.tv)
-  * __api_token__ -- authenticating user's API token, found on <http://vhx.tv/settings>
+  * __api_token__ -- authenticating user's API token, found on <http://community.vhx.tv/settings>
 
 
 ### [User Authentication](#user_authentication)
@@ -94,7 +94,7 @@ Share that same video, with a simple urlencoded comment. First video posted on V
 We currently use simple API tokens to authenticate you as a user. Just specify "login" and "api_token" parameters with your requests:
 
 * __login__ -- can be username (jamiew) or email address (jamie@vhx.tv)
-* __api_token__ -- can be found on <http://vhx.tv/settings>
+* __api_token__ -- can be found on <http://community.vhx.tv/settings>
 
 We plan to add full OAuth2 support soon.
 
@@ -142,7 +142,7 @@ _public_
 
 ### [Playlists](#playlists)
 
-A video mixtape, composed of a list of videos with "position" attributes. Yes, we support [animated GIFs](http://vhx.tv/casey/robocop)!
+A video mixtape, composed of a list of videos with "position" attributes. Yes, we support [animated GIFs](http://community.vhx.tv/casey/robocop)!
 
 _public_
 
@@ -174,9 +174,9 @@ The rough order of operations to create a playlist are:
 * PUT /playlists/123/videos/456789/move -- with a 'position' parameter
 * DELETE /playlists/123/videos/456789 -- to remove it completely
 
-The playlist is visible on vhx.tv at http://vhx.tv/{USERNAME}/{PLAYLIST_SLUG}
+The playlist is visible on vhx.tv at http://community.vhx.tv/{USERNAME}/{PLAYLIST_SLUG}
 
-http://vhx.tv/playlists/123 is still a valid API resource endpoint, and if you visit it on the live site it will 301 Redirect to semantic URL.
+http://community.vhx.tv/playlists/123 is still a valid API resource endpoint, and if you visit it on the live site it will 301 Redirect to semantic URL.
 
 
 ### [User info & Followers](#user_info_followers)

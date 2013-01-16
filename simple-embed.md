@@ -7,17 +7,17 @@ title: Simple Megaplaya Embed -
 
 This is an embed using no javascript. Scroll down to look at the code. If you don't plan on doing anything more than just embed the player we highly suggest you use the [universal embed](/iframe-embed.html) instead
 
-<object width="850" height="480"><param name="movie" value="http://vhx.tv/embed/megaplaya.swf?videos=http://vimeo.com/25584378,http://www.youtube.com/watch?v=btV6M2xDe38"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://vhx.tv/embed/megaplaya.swf?videos=http://vimeo.com/25584378,http://www.youtube.com/watch?v=btV6M2xDe38" type="application/x-shockwave-flash" width="850" height="480" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+<object width="850" height="480"><param name="movie" value="http://community.vhx.tv/embed/megaplaya.swf?videos=http://vimeo.com/25584378,http://www.youtube.com/watch?v=btV6M2xDe38"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://community.vhx.tv/embed/megaplaya.swf?videos=http://vimeo.com/25584378,http://www.youtube.com/watch?v=btV6M2xDe38" type="application/x-shockwave-flash" width="850" height="480" allowscriptaccess="always" allowfullscreen="true"></embed></object>
 
 This player adds comma-separated list of video URLs to the player.
 
-    http://vhx.tv/embed/megaplaya.swf?videos=http://vimeo.com/25584378,http://www.youtube.com/watch?v=btV6M2xDe38
+    http://community.vhx.tv/embed/megaplaya.swf?videos=http://vimeo.com/25584378,http://www.youtube.com/watch?v=btV6M2xDe38
 
 And here's the actual HTML we used. When you update the code, be sure to update the url in _both_ places.
 
 <script>
   $(document).ready(function() {
-    $('#embed_code')[0].innerHTML = "<object width='640' height='480'><param name='movie' value='http://vhx.tv/embed/megaplaya.swf?videos=http://vimeo.com/25584378,http://www.youtube.com/watch?v=btV6M2xDe38'></param><param name='allowFullScreen' value='true'></param><param name='allowscriptaccess' value='always'></param><embed src='http://vhx.tv/embed/megaplaya.swf?videos=http://vimeo.com/25584378,http://www.youtube.com/watch?v=btV6M2xDe38' type='application/x-shockwave-flash' width='640' height='480' allowscriptaccess='always' allowfullscreen='true'></embed></object>".replace(/'/g, '"');
+    $('#embed_code')[0].innerHTML = "<object width='640' height='480'><param name='movie' value='http://community.vhx.tv/embed/megaplaya.swf?videos=http://vimeo.com/25584378,http://www.youtube.com/watch?v=btV6M2xDe38'></param><param name='allowFullScreen' value='true'></param><param name='allowscriptaccess' value='always'></param><embed src='http://community.vhx.tv/embed/megaplaya.swf?videos=http://vimeo.com/25584378,http://www.youtube.com/watch?v=btV6M2xDe38' type='application/x-shockwave-flash' width='640' height='480' allowscriptaccess='always' allowfullscreen='true'></embed></object>".replace(/'/g, '"');
   })
 </script>
 <textarea class="field" id="embed_code" onclick="this.select()">

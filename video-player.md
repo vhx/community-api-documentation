@@ -8,7 +8,7 @@ title: Megaplaya -
 <script type="text/javascript">
   $(document).ready(function(){
     $('#vhx_megaplaya').flash({
-      swf: 'http://vhx.tv/embed/megaplaya',
+      swf: 'http://community.vhx.tv/embed/megaplaya',
       width: 450,
       allowFullScreen: true,
       allowScriptAccess: "always",
@@ -61,7 +61,7 @@ The below demo loads all the videos from [vimeo.com/vhx](http://vimeo.com/vhx) i
 <pre>
 $(document).ready(function(){
     $('#vhx_megaplaya').flash({
-      swf: 'http://vhx.tv/embed/megaplaya',
+      swf: 'http://community.vhx.tv/embed/megaplaya',
       width: 450,
       allowFullScreen: true,
       allowScriptAccess: "always",
@@ -117,12 +117,12 @@ We have many variations of embedding Megaplaya that should suit all your needs.
   <tr>
     <td class="head">Simple</td>
     <td>Specify a list of video URLs<br /><a href="/simple-embed.html">Click here to see a demo</a></td>
-    <td class="code">http://vhx.tv/embed/megaplaya.swf?videos=http://vimeo.com/25584378,http://www.youtube.com/watch?v=btV6M2xDe38</td>
+    <td class="code">http://community.vhx.tv/embed/megaplaya.swf?videos=http://vimeo.com/25584378,http://www.youtube.com/watch?v=btV6M2xDe38</td>
   </tr>
   <tr>
     <td class="head">Smart</td>
     <td>Specify a VHX URL to pull videos from. The embed will always play the latest videos in that channel, e.g. <b>/casey/shared</b><br /><a href="/iframe-embed.html">Click here to see a demo</a></td>
-    <td class="code">http://vhx.tv/embed/megaplaya.swf?url=/casey/shared</td>
+    <td class="code">http://community.vhx.tv/embed/megaplaya.swf?url=/casey/shared</td>
   </tr>
   <tr>
     <td class="head">Advanced</td>
@@ -135,22 +135,22 @@ We have many variations of embedding Megaplaya that should suit all your needs.
 
 Please note that if you want the embed to work on mobile platforms you should use the [iframe embed](/iframe-embed.html). Iframes require the below url:
 
-    http://vhx.tv/embed/megaplaya.html
+    http://community.vhx.tv/embed/megaplaya.html
 
 Embedding with javascript control requires the below url:
 
-    http://vhx.tv/embed/megaplaya.swf
+    http://community.vhx.tv/embed/megaplaya.swf
 
 ### [Player setup using jQuery](#setup)
 
 For this demo we're using jQuery, but you can use whatever you want. [jquery.swfobject](http://jquery.thewikies.com/swfobject/) is used for injecting the SWF in a cross-browser, standards-compliant manner, but you could use vanilla [SWFObject](http://code.google.com/p/swfobject/) as well.
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
-    <script type="text/javascript" src="http://vhx.tv/javascripts/jquery.swfobject-1.1.1.js"></script>
+    <script type="text/javascript" src="http://community.vhx.tv/javascripts/jquery.swfobject-1.1.1.js"></script>
 
 This is the Megaplaya SWF URL:
 
-    http://vhx.tv/embed/megaplaya
+    http://community.vhx.tv/embed/megaplaya
 
 Now add a #vhx_megaplaya div and inject the SWF into your page. This example uses [jquery-swfobject](http://jquery.thewikies.com/swfobject/) to inject the SWF:
 
@@ -159,7 +159,7 @@ Now add a #vhx_megaplaya div and inject the SWF into your page. This example use
     <script>
       $(document).ready(function(){
         $('#vhx_megaplaya').flash({
-          swf: 'http://vhx.tv/embed/megaplaya',
+          swf: 'http://community.vhx.tv/embed/megaplaya',
           width: 500,
           height: 375,
           allowFullScreen: true,
